@@ -1,11 +1,11 @@
-header {background: #0f1a33;position: sticky;position: -webkit-sticky;z-index: 9999;top: 0;}
+header {background: none;position: sticky;position: -webkit-sticky;z-index: 9999;top: 0;}
 header nav {background: none !important;padding: 0 !important;transition:.2s all;}
 header nav .container {align-items: center;}
 header nav .navbar-collapse {align-items: center;justify-content: end;}
 /*header .navbar-brand {padding-top: 0;position: absolute;top: 0;z-index: 2000;}*/
 header .navbar-brand img {width:58px; transition:.2s all}
 
-header .navbar-expand-lg .navbar-nav .nav-link {font-size: 14px;text-transform:uppercase;color: rgba(255, 255, 255, .8) !important;position:relative;padding: 26px 0px; z-index: 2000; width: 150px; text-align: center;}
+header .navbar-expand-lg .navbar-nav .nav-link {font-size: 14px;text-transform:uppercase;color: rgba(255, 255, 255, .8) !important;position:relative;padding: 26px 30px; z-index: 2000; text-align: center; font-weight: bold;}
 header .navbar-expand-lg .navbar-nav .nav-link .icon-home {font-size:20px}
 header .navbar-expand-lg .mb-lg-0 .nav-link:before, .navbar-vertical .nav-link:before {content:'';position:absolute;height: 3px;background:var(--sub-color);bottom: 0;left:40px;right: 40px;transition:.2s all;opacity:0;z-index: 2;}
 header .navbar-expand-lg .navbar-nav .active .nav-link, header .navbar-expand-lg .navbar-nav .nav-link:hover, .navbar-vertical .active .nav-link, .navbar-vertical .nav-link:hover {color: rgba(255, 255, 255, 1) !important;}
@@ -40,11 +40,11 @@ header nav li a.active, header nav li a:hover {color: var(--sub-color) !importan
 
 header nav li a.active.dropdown-toggle img, header nav li a.dropdown-toggle:hover img {filter: hue-rotate(-32deg) saturate(7);}
 
-header {background: var(--main-color); position: sticky; top: 0; width: 100%;}
-.scrollDown header, header.show {background: var(--main-color);}
-
+header {background: none; position: fixed; top: 0; width: 100%;}
+/*.scrollDown header, header.show {background: var(--main-color);}*/
+header.active{ background-color:var(--main-color); }
 .active .navbar-expand-lg .navbar-nav .nav-link {
-    padding: 18px 0px;
+    padding: 18px 30px;
 }
 .active .navbar-brand img {
     width: 49px;

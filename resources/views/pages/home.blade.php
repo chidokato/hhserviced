@@ -24,8 +24,8 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="slider-content">
-                                    {!! $val->content !!}
-                                    <button class="btn-button">Khám phá</button>
+                                    <!-- {!! $val->content !!} -->
+                                    <!-- <button class="btn-button">Khám phá</button> -->
                                 </div>
                             </div>
                         </div>
@@ -79,6 +79,8 @@
                                     </div>
                                 </div>
                             </div>
+                            <br>
+                            <button class="btn-button">Khám phá</button>
                         </div>
                     </div>
                 </div>
