@@ -99,9 +99,9 @@
                     <h2><span class="cover-title-filled text-main">Chốn dừng chân an yên <br> giữa nhịp sống sôi động</span></h2>
                 </div>
                 <div class="cover-descip">
-                    <p> lại có thêm không gian, tiện lợi và tiện nghi để bạn cảm thấy như đang ở trong chính ngôi nhà của mình, H&H Serviced Apartments hứa hẹn sẽ mang đến trải nghiệm lưu trú hoàn hảo cho những chuyến "dịch chuyển" của quý khách.</p>
+                    <p> Vừa cung cấp đầy đủ các tiện nghi giống như một khách sạn truyền thống, nhưng lại có thêm không gian, tiện lợi và tiện nghi để bạn cảm thấy như đang ở trong chính ngôi nhà của mình, H&H Serviced Apartments hứa hẹn sẽ mang đến trải nghiệm lưu trú hoàn hảo cho những chuyến "dịch chuyển" của quý khách.</p>
                 </div>
-                <button class="btn-button">Khám phá</button>
+                <button class="btn-button">Khám phá thêm</button>
                 <div class="line"></div>
                 <div class="cover-title">
                     <h2><span class="cover-title-filled text-main">Khám phá chuỗi căn hộ <br> dịch vụ của H&H</span></h2>
