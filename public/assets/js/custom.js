@@ -57,24 +57,50 @@
 
 
 
-var mainMenu = document.getElementById('navbarToggler');
-    mainMenu.onclick = function() {toggleActive()}
-    function toggleActive() {
-      mainMenu.classList.toggle("active");
-      document.querySelector('header').classList.toggle("show");
-    }
-    
-// var expandSearchBtn = document.getElementById('expand-search-btn');
-//     expandSearchBtn.onclick = function() {toggleClassActive()}
-
-// var closeSearchBtn = document.querySelector('#expand-search .btn-close')
-//     closeSearchBtn.onclick = function() {toggleClassActive()}
-//     function toggleClassActive() {
-//       expandSearchBtn.classList.toggle("active");
+// var mainMenu = document.getElementById('navbarToggler');
+//     mainMenu.onclick = function() {toggleActive()}
+//     function toggleActive() {
+//       mainMenu.classList.toggle("active");
+//       document.querySelector('header').classList.toggle("show");
 //     }
+    
+// // var expandSearchBtn = document.getElementById('expand-search-btn');
+// //     expandSearchBtn.onclick = function() {toggleClassActive()}
+
+// // var closeSearchBtn = document.querySelector('#expand-search .btn-close')
+// //     closeSearchBtn.onclick = function() {toggleClassActive()}
+// //     function toggleClassActive() {
+// //       expandSearchBtn.classList.toggle("active");
+// //     }
 
 
-function myFunctLink(element) {
-  location.href = element.attributes.href.value;
-}
+// function myFunctLink(element) {
+//   location.href = element.attributes.href.value;
+// }
+
+
+
+// Khi click vào toggler để mở/đóng menu
+$('.toggle-menu').on('click', function(event) {
+    $('.menu-left').toggleClass('active');
+    event.stopPropagation();  // Ngăn sự kiện click lan ra ngoài
+});
+
+// Khi click ra ngoài menu hoặc toggler, ẩn class 'active'
+$(document).on('click', function(event) {
+    var $menu = $('.menu-left');
+    var $toggler = $('.toggle-menu');
+    
+    if (!$menu.is(event.target) && $menu.has(event.target).length === 0 &&
+        !$toggler.is(event.target)) {
+        $menu.removeClass('active');
+    }
+});
+
+// Khi click vào phần tử có class 'close', ẩn class 'active'
+$('.close').on('click', function() {
+    $('.menu-left').removeClass('active');
+});
+
+
 

@@ -63,7 +63,15 @@
             </div>
 
             <div class="menu-left">
-                
+                <div class="close"><button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas"></button></div>
+                <div class="menu-iteam">
+                    <ul>
+                        @foreach($menu as $key => $val)
+                        <li><a href="">{{$val->name}}</a></li>
+                        @endforeach
+                        <li><a href="">Đăng ký/đăng nhập</a></li>
+                    </ul>
+                </div>
             </div>
 
         </div>

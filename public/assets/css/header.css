@@ -166,6 +166,13 @@ header nav li.notification .message i {
 .col-lg-3 .toggle-nv {bottom:initial;top: 54px;position:fixed;width: 48px;height: 48px;z-index: 1000;display: flex;justify-content: center;align-items: center;border-radius: 0 0 0 0.45rem;transform: none;background: rgb(13 70 120);transition: all .3s;}
 .col-lg-3 .toggle-nv.active {right: 64%;}
 
+.menu-left{ background:#131313; position:fixed; width:30%; height:100vh; top:0; padding-left:40px; display:flex; align-items: center; color:#fff; z-index:9999; right:-30%; transition-property: all;transition-duration: 0.2s; }
+.menu-left .menu-iteam ul{ display:flex; flex-direction: column; }
+.menu-left .menu-iteam ul li{ padding:15px }
+.menu-left .menu-iteam ul li a{ color:#fff; font-size:1.6rem; padding:15px 0px; font-weight:bold;  }
+.menu-left.active{ right:0;transition-property: all;transition-duration: 0.2s; }
+.menu-left .close{ position:absolute; right:50px; top:50px }
+
 @media (min-width: 768px) {
 /*  header .container {max-width: 100%;}*/
   
