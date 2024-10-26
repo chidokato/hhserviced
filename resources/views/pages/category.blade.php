@@ -36,7 +36,7 @@
                     <li class="breadcrumb-item active" aria-current="page">{{$data->name}}</li>
                     </ol>
                 </nav>
-                <h1 class="text-uppercase title-cat">Đặt phòng</h1>
+                <!-- <h1 class="text-uppercase title-cat">Đặt phòng</h1> -->
                 
                 <div class="sort-box">
                     <span>có <span class="text-main font-weight-semibold">Có {{ $posts->total() }}</span> khách sạn phù hợp</span>
@@ -56,16 +56,13 @@
                 <div class="row row-cols-1 g-4 row-cols-md-1 horizontal-view">
                     @foreach($posts as $key => $val)
                         <div class="col">
-                            <div class="card card-s card-s4 video">
+                            <div class="card card-s ChICl">
                                 <a href="#">
                                     <span class="cat">
                                         <span class="room-status">Đã sử dụng</span>
                                     </span>
                                     <div class="swiper mySwiper-cat">
                                         <div class="swiper-wrapper">
-                                            <div class="swiper-slide"><img src="data/images/{{$val->img?$val->img:'no_image.jpg'}}"></div>
-                                            <div class="swiper-slide"><img src="data/images/{{$val->img?$val->img:'no_image.jpg'}}"></div>
-                                            <div class="swiper-slide"><img src="data/images/{{$val->img?$val->img:'no_image.jpg'}}"></div>
                                             <div class="swiper-slide"><img src="data/images/{{$val->img?$val->img:'no_image.jpg'}}"></div>
                                         </div>
                                         <div class="swiper-button-next"></div>
@@ -76,16 +73,27 @@
                                 </a>
                                 <div class="card-body">
                                     <div class="card-body-wrap">
+                                        <div class="cat-name"><span>{{$val->Province->name}}</span></div>
                                         <h5 class="card-title"><a href="#" class="text-truncate">{{$val->name}}</a></h5>
                                         <div class="card-info">
                                             <span><i class="icon-location me-2"></i>Nam Từ Liêm, Hà Nội</span>
                                         </div>
-                                        <p class="mb-0 text-truncate-set text-truncate-set-2">Cần bán căn hộ chung cư licogi 13, Thanh Xuân. DT 90m2, 2PN, 2wc, giá tốt 2,63 tỷ. Gọi ngay cho Hiển_phố 0965 128 850Vị trí: Tọa lạc tại số 164 Khuất Duy Tiến, gần ngã tư Khuất Duy Tiến - Lê Văn Lươn...</p>
+                                        <div class="rtyrtyr">
+                                            <span class="hDtGYp"> <img class="hweAGz" src="assets/images/icon/image_3619735758_b71e263a8b.jpg"> view cây xanh</span>
+                                            <span class="hDtGYp"> <img class="hweAGz" src="assets/images/icon/image_679768715_a07268216e.jpg"> view thành phố</span>
+                                            <span class="hDtGYp"> + 6 </span>
+                                        </div>
+                                        <div class="digital text-truncate-set-2 text-truncate-set">
+                                            {!! $val->content !!}
+                                        </div>
                                     </div>
-                                    <div class="card-footer">
-                                        <div class="card-price">Giá: <span class="current-price">4,3 tỷ</span><span class="old-price">5,6 tỷ</span></div>
-                                        <!-- <a class="card-contact" href="tel:0919511881"><i class="icon-phone-filled"></i><span class="ps-2">Gọi ngay</span></a> -->
-                                    </div>
+                                </div>
+                                <div class="price-container">
+                                    <span class="sc-gUQvok letfsk">CHỈ TỪ</span>
+                                    <div class="sc-gjNHFA hTuhhX">1.300.000</div>
+                                    <span class="sc-fmciRz flxGLN">Đồng / Đêm</span>
+                                    <div class="sc-iFMAIt bSRrbj">Đã bao gồm thuế và phí</div>
+                                    <div class="sc-eWfVMQ crMWDy mt-4"><button class="sc-dwsnSq isREzM primary-btn">Chọn phòng</button></div>
                                 </div>
                             </div>
                         </div>

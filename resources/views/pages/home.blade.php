@@ -85,7 +85,7 @@
             <div class="position-relative grid-view">
                 <div class="swiper">
                     <div class="swiper-wrapper">
-                        @foreach($news as $val)
+                        @foreach($product as $val)
                         <div class="swiper-slide">
                             <div class="col">
                                 <div class="card card-s card-s4 ">
@@ -97,7 +97,7 @@
                                             <h5 class="card-title"><a href="{{$val->category->slug}}/{{$val->slug}}" class="text-truncate">{{$val->name}}</a></h5>
                                             <div class="card-info" title="">
                                                 <span class="">
-                                                    {{$val->detail}}
+                                                    {!! $val->content !!}
                                                 </span>
                                             </div>
                                         </div>
