@@ -89,8 +89,8 @@
                                     </div>
                                 </div>
                                 <div class="price-container">
-                                    <span class="sc-gUQvok letfsk">CHỈ TỪ</span>
-                                    <div class="sc-gjNHFA hTuhhX">1.300.000</div>
+                                    <span class="sc-gUQvok letfsk">Giá</span>
+                                    <div class="sc-gjNHFA hTuhhX">Liên hệ</div>
                                     <span class="sc-fmciRz flxGLN">Đồng / Đêm</span>
                                     <div class="sc-iFMAIt bSRrbj">Đã bao gồm thuế và phí</div>
                                     <div class="sc-eWfVMQ crMWDy mt-4"><button class="sc-dwsnSq isREzM primary-btn">Chọn phòng</button></div>
