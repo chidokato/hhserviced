@@ -52,6 +52,8 @@ h2 {font-size: 32px;}
 h4 {font-size: 25px;}
 h5 {font-family: var(--subtitle-fontface); font-size: 19px;}
 
+.bg-fafafa{ background:#fafafa }
+
 .text-sm {font-size: 13px;}
 .text-vsm {font-size: 11px;line-height: 1.25;}
 .text-underline {text-decoration: underline}

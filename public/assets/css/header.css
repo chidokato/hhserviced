@@ -1,4 +1,4 @@
-header {background: none;position: sticky;position: -webkit-sticky;z-index: 9999;top: 0;}
+header {background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%,  rgb(0 0 0 / 80%) 100%);position: sticky;position: -webkit-sticky;z-index: 9999;top: 0;}
 header nav {background: none !important;padding: 0 !important;transition:.2s all;}
 header nav .container {align-items: center;}
 header nav .navbar-collapse {align-items: center;justify-content: end;}
@@ -40,7 +40,7 @@ header nav li a.active, header nav li a:hover {color: var(--sub-color) !importan
 
 header nav li a.active.dropdown-toggle img, header nav li a.dropdown-toggle:hover img {filter: hue-rotate(-32deg) saturate(7);}
 
-header {background: none; position: fixed; top: 0; width: 100%;}
+header {position: fixed; top: 0; width: 100%; }
 /*.scrollDown header, header.show {background: var(--main-color);}*/
 header.active{ background-color:var(--main-color); }
 .active .navbar-expand-lg .navbar-nav .nav-link {
@@ -172,6 +172,8 @@ header nav li.notification .message i {
 .menu-left .menu-iteam ul li a{ color:#fff; font-size:1.6rem; padding:15px 0px; font-weight:bold;  }
 .menu-left.active{ right:0;transition-property: all;transition-duration: 0.2s; }
 .menu-left .close{ position:absolute; right:50px; top:50px }
+
+.header-page{ background:var(--main-color); position: relative; }
 
 @media (min-width: 768px) {
 /*  header .container {max-width: 100%;}*/

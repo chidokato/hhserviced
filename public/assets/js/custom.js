@@ -102,5 +102,16 @@ $('.close').on('click', function() {
     $('.menu-left').removeClass('active');
 });
 
+$(document).on('click', function(event) {
+    // Kiểm tra nếu click không nằm trong #diadiem hoặc .list-diadiem
+    if (!$(event.target).closest('#diadiem, .list-diadiem').length) {
+        $('.list-diadiem').removeClass('active'); // Ẩn khi click ra ngoài
+    }
+});
+
+$('#diadiem').on('click', function(event) {
+    event.stopPropagation(); // Ngăn chặn sự kiện click lan ra ngoài
+    $('.list-diadiem').toggleClass('active');
+});
 
 

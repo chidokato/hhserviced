@@ -22,7 +22,7 @@
 .card-s .cat, .card-s .hot, .card-s .view-more {position:absolute; z-index:2;}
 .card-s .hot {top: -6px;right: -6px;display: block;width: 64px;}
 .card-s .hot img {max-width:100%}
-.card-s .cat {top: 5px;left: 0px;border-radius: 4px;color: #fff;font-size: 12px;padding: 2px 12px 4px;}
+.card-s .cat {top: 10px;left: 10px;border-radius: 20px;color: #fff;font-size: 12px;padding: 2px 12px 4px;}
 
 .card-s.video > a .view-more, .card-s .view-more {display:none}
 
@@ -51,7 +51,7 @@
 .grid-view .card-contact::after {content:'Gọi ngay';color:#888;position: relative;right: -8px;} */
 
 .grid-view .card-s .cat, .horizontal-view .card-s .cat {background:none;padding:0;display: flex;align-items: center;}
-.card-s .cat span {background-color: rgba(0,0,0,.64);padding: 1px 8px 3px;border-radius: 4px;}
+.card-s .cat span {background-color: rgba(0,0,0,.64);padding: 3px 13px 3px;border-radius: 20px;}
 .card-s .cat .btn {padding:0}
 .card-s .cat .heart {margin-right: 16px;font-size:20px;display:flex;align-items:center;height: 36px;border-radius: 50%;padding-top: 4px; color: #fff;}
 .card-s .cat .room-status {position:relative; margin-right: 10px;}
@@ -60,10 +60,10 @@
 .card-s .cat .btn.active .heart {background-color:var(--sub-color)}
 .bg-red{ background-color:var(--main-color) !important; }
 
-.video > a::before, .video > a::after {content:'';position: absolute;top:0;bottom:0;right:0;left: 0;margin: auto;z-index: 2;}
-.video > a::before {background-color: rgba(0,0,0,.5);width: 48px;height: 48px;border-radius: 50%;}
-.video > a::after {border-left: 12px solid #fff;border-top: 8px solid transparent;border-right: 0;border-bottom: 8px solid transparent;width: 8px;height: 8px;left: 4px;}
-.video:hover > a::after {border-left-color:var(--sub-color)}
+/*.video > a::before, .video > a::after {content:'';position: absolute;top:0;bottom:0;right:0;left: 0;margin: auto;z-index: 2;}*/
+/*.video > a::before {background-color: rgba(0,0,0,.5);width: 48px;height: 48px;border-radius: 50%;}*/
+/*.video > a::after {border-left: 12px solid #fff;border-top: 8px solid transparent;border-right: 0;border-bottom: 8px solid transparent;width: 8px;height: 8px;left: 4px;}*/
+/*.video:hover > a::after {border-left-color:var(--sub-color)}*/
 
 .card-s2 > a, .card-s3 > a span {position: relative;z-index: 2;width: 34.8314607%;border-radius: 50%;border: 2px solid var(--main-color);margin: auto; background-color:#fff}
 .card-s2 > a .card-img-top {background-size:contain;/* overflow:hidden; */}
@@ -155,7 +155,27 @@
 
 
 
+.mySwiper-cat .swiper-pagination { background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgb(0 0 0 / 80%) 100%); color: #fff; }
+.mySwiper-cat .swiper-button-next{ right:0 }
+.mySwiper-cat .swiper-button-prev{ left:0 }
+.mySwiper-cat .swiper-button-next,
+.mySwiper-cat .swiper-button-prev {
+  width: 30px;
+  height: 30px;
+  top: 52%;
+  background: #063e3d85;
+  border: none;
+  display: none;
+  color: #fff;
+}
 
+/* Khi hover vào slider, các nút điều hướng sẽ xuất hiện */
+.mySwiper-cat:hover .swiper-button-next,
+.mySwiper-cat:hover .swiper-button-prev {
+  display: flex; 
+}
+
+.mySwiper-cat .swiper-button-next::after, .mySwiper-cat .swiper-button-prev::after{ font-size: 13px; }
 /* RESONSIVE */
 
 @media (min-width: 992px) {
@@ -184,8 +204,8 @@
 
 @media (min-width: 769px) {
 	.horizontal-view .card-s {flex-direction: row;box-shadow: 0 0 2px rgb(0 0 0 / 10%);border: 1px solid rgb(0 0 0 / 6%);border-radius: .25rem;}
-/*    .horizontal-view .card-s > a {flex: 0 0 auto;width: 33.33333333%;right: -8px;top: -12px;z-index: 2;align-self: flex-start;}*/
-    .horizontal-view .card-s > .card-body {flex: 0 0 auto;width: 66.66666667%;margin: 0;border-radius: 0 .25rem .25rem 0;display: flex;flex-direction: column;justify-content: space-between;padding: 15px 20px 15px 32px;border: none;box-shadow: none;}
+    .horizontal-view .card-s > a {flex: 0 0 auto;width: 33.33333333%;z-index: 2;align-self: flex-start;}
+    .horizontal-view .card-s > .card-body {flex: 0 0 auto;width: 66.66666667%;margin: 0;border-radius: 0 .25rem .25rem 0;display: flex;flex-direction: column;justify-content: space-between;padding: 15px;border: none;box-shadow: none;}
     .horizontal-view .card-footer {align-items:center;display: flex;justify-content: space-between;/* flex-direction: column; */border-top: 0;flex: 0 0 auto;padding-top: 0;}
     .horizontal-view .card-footer .card-contact {flex:1;color: var(--sub-color);}
     .horizontal-view .card-footer .card-contact i {height:36px;flex:0 0 36px;font-size: 20px;}

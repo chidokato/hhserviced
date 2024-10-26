@@ -190,53 +190,7 @@
 .hero-text h2 {font-size: 48px;font-weight: bold;text-shadow: 0 0 8px rgb(0 0 0 / 60%);text-transform: uppercase;margin-bottom: 24px;}
 .hero-text p {font-size: 26px;text-shadow: 0 0 6px rgb(0 0 0 / 60%);text-transform: uppercase}
 
-.hero-search {pointer-events: all;}
-.hero-search-wrap {display: flex;flex-wrap: wrap;justify-content: end;}
-.hero-search-wrap .row {width:100%;border-radius:40px;background: #fff;margin-bottom: 8px; padding:11px 8px 11px 20px}
-.hero-search-wrap .row select {height:100%;border:none;border-radius:40px 0 0 40px;max-width: 88%;margin: auto;font-size: 14px;}
-.hero-search-wrap .row button {background-color: var(--main-color);border-radius: 40px !important;color: var(--sub-color);position: relative; width: 100%;}
-.hero-search-wrap .row button:hover {color:#fff}
-.hero-search-wrap .row button i {font-size:20px;vertical-align:-2px;padding-right:4px;}
-.hero-search-wrap .row .input-group {height:48px}
-.hero-search-wrap .row .input-group span {display: flex;align-items: center;flex:1;color: #666;}
-.hero-search-wrap .row .input-group span i {font-size:20px}
-.hero-search-wrap .row .input-group span input {padding-left:6px}
-.hero-search-wrap .row .form-group { padding:0px 20px; border-right:1px solid #ddd; }
-.border-none{ border-right:none !important }
-.hero-search-wrap label{ color:var(--main-color); text-align:left; width:100% }
-.hero-search-wrap input{ padding:0 }
-.hero-search-wrap input::placeholder {
-    color: #999; /* Màu placeholder */
-}
-.margin-padding-none{ padding:0; margin:0 }
 
-.hero-search ul {justify-content: center;margin-bottom: 16px;}
-.hero-search ul li button {border: none;padding: 5px 20px 7px;background-color: rgba(0,0,0,.36);border: 1px solid rgba(255,255,255,.72);color: rgba(255,255,255,.72);text-transform: uppercase;border-radius: .25rem;margin: 0 6px 20px;font-weight: bold;}
-.hero-search ul li button:hover {background-color:var(--main-color); border-color:var(--main-color); color:#fff}
-.hero-search ul li button.active {background-color: var(--sub-color);border-color:  var(--sub-color);position: relative;color: #fff;}
-.hero-search ul li button.active::after {
-    width: 0;
-    border-style: solid;
-    border-width: 8px 6px 0px 6px !important;
-    border-color: var(--sub-color) transparent transparent transparent;
-    content:''; position: absolute; bottom: -8px; margin: auto; left: 0; right: 0;}
-
-.hero-search .btn-expand {color:rgba(255 255 255 / 70%);font-size:15px;position:relative;display: flex;align-items: center;-webkit-text-stroke-width: 0.4px;letter-spacing: .4px;width: 128px;margin-left: auto;margin-top: 8px;}
-.hero-search .btn-expand::before {content:''; position:absolute; width:32px; height:1px; background:rgba(255 255 255 / 80%); top:0; bottom:0; margin:auto; left:-32px}
-.hero-search .btn-expand i, .sec-tcg .tcg-submit .btn i {display:flex;width: 28px;height: 28px;border: 1.6px solid;border-radius: 50%;justify-content: center;align-items: center;margin-left: 12px;font-size: 24px;flex: 0 0 auto;}
-.hero-search .btn-expand i::before, .sec-tcg .tcg-submit .btn i::before {content: '+';font-style: normal;line-height: 1;margin-top: -9px;-webkit-text-stroke-width: 0;}
-.hero-search .btn-expand:hover {color:rgba(255 255 255 / 100%)}
-.hero-search .btn-expand span {flex:0 0 68px}
-.hero-search .btn-expand span::before, .sec-tcg .tcg-submit .btn.collapsed span::before {content:'Má»Ÿ rá»™ng'}
-.hero-search .btn-expand.active span::before, .sec-tcg .tcg-submit .btn span::before {content:'Thu gá»n'}
-.hero-search .btn-expand.active span + i::before, .sec-tcg .tcg-submit .btn i::before, .offcanvas.show ~ .hero-content .hero-search .btn-expand span + i::before {content:'-'}
-
-.sec-hero .hero-slider .container{ position:relative; }
-.hero-search .btn-button{ font-size:1.3rem; padding:15px 40px }
-.sec-hero .hero-slider .container .slider-content{ text-align:center; color:#fff }
-.sec-hero .hero-slider .container .slider-content h2{font-size: 4rem; font-weight: bold; color: var(--sub-color);}
-.sec-hero .hero-slider .container .slider-content h3{ font-size:2.5rem; color: var(--sub-color) }
-.sec-hero .hero-slider .container .slider-content p{ font-size:1.2rem }
 
 .sec-tcg {background: url(../images/bg-tcg.jpg) no-repeat center bottom;background-size: cover;position: relative;min-height: 650px;}
 .sec-tcg .tcg-content .mb-2 {margin-bottom: 10px !important;}
@@ -275,6 +229,9 @@
 .about-home p{ text-align:justify; font-size:1.5rem; margin-bottom:3rem }
 .about-home .img img{width: 100%; border-radius: 30px; margin-bottom: 2rem}
 
+
+input::placeholder{opacity: 1 !important;}
+input:focus::placeholder{opacity: 1 !important;}
 
 
 @media (min-width: 992px) {

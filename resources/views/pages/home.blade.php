@@ -10,7 +10,10 @@
 @endsection
 
 @section('content')
+<div class="home">
+    
 
+@include('layout.header')
 <!------------------- HERO ------------------->
 <section class="sec-hero">
     <div class="hero-slider">
@@ -47,41 +50,10 @@
             <div class="hero-search">
                 <div class="row g-0 justify-content-center">
                     <div class="col-lg-9">
-                        <div class="" id="sale-search">
-                            <div class="hero-search-wrap">
-                                <div class="row g-0">
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label>Điểm đến</label>
-                                            <input class="form-control" type="" name="" placeholder="Tìm điểm đến">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-5 d-lg-flex">
-                                        <div class="form-group">
-                                            <label>Nhận phòng</label>
-                                            <input class="form-control" type="" name="" placeholder="T5 20 Th10 2024">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Trả phòng</label>
-                                            <input class="form-control" type="" name="" placeholder="T5 20 Th10 2024">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="form-group border-none">
-                                            <label>Số khách</label>
-                                            <input class="form-control" type="" name="" placeholder="2">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="input-group">
-                                            <button type="button" class="btn btn-submit">Nhận phòng</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <br>
-                            <button class="btn-button">Khám phá</button>
-                        </div>
+                        @include('layout.search')
+                        <br>
+                        <br>
+                        <button class="btn-button">Khám phá</button>
                     </div>
                 </div>
             </div>
@@ -187,7 +159,7 @@
         </div>
     </div>
 </section>
-
+</div>
 @endsection
 
 @section('js')
@@ -237,7 +209,6 @@
                     slidesPerView: 2,
                     spaceBetween: 0,
                     coverflowEffect: {
-                        
                         depth: 10,
                     }
                 },

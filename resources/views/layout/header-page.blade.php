@@ -1,5 +1,5 @@
 <!------------------- NAVIGATOR ------------------->
-<header class="navhome" id="header">
+<header class="navhome header-page" id="header">
     <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Ninth navbar example">
         <div class="container new-menu">
             <a class="navbar-brand" href="{{asset('')}}"><img src="data/images/{{$setting->img}}" alt="" class="mw-100"></a>
