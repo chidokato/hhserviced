@@ -64,6 +64,9 @@
                                     <div class="swiper mySwiper-cat">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide"><img src="data/images/{{$val->img?$val->img:'no_image.jpg'}}"></div>
+                                            <div class="swiper-slide"><img src="data/images/{{$val->img?$val->img:'no_image.jpg'}}"></div>
+                                            <div class="swiper-slide"><img src="data/images/{{$val->img?$val->img:'no_image.jpg'}}"></div>
+                                            <div class="swiper-slide"><img src="data/images/{{$val->img?$val->img:'no_image.jpg'}}"></div>
                                         </div>
                                         <div class="swiper-button-next"></div>
                                         <div class="swiper-button-prev"></div>
