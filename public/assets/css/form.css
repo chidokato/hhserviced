@@ -25,7 +25,7 @@
     position: sticky;
     top: 0;
     background: #fff;
-    z-index: 9999;
+    z-index: 999;
     box-shadow: rgba(16, 25, 40, 0.05) 0px 5px 13px -5px;
 }
 .floating-label .form-floating .form-select {font-size:14px;background-position: right .75rem top .75rem;}

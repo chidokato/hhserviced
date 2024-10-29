@@ -37,8 +37,8 @@
 }
 .horizontal-view .card-s .card-info span{ font-size:1rem }
 .horizontal-view .card-s > a{ width:30% }
-.horizontal-view .card-s > .card-body{ width:45% }
-.horizontal-view .price-container{ width:25%; background:#fff; border-left:1px solid rgb(246, 246, 246); border-radius: 0 12px 12px 0; 
+.horizontal-view .card-s > .card-body{ width:50% }
+.horizontal-view .price-container{ width:20%; background:#fff; border-left:1px solid rgb(246, 246, 246); border-radius: 0 12px 12px 0; 
 display: flex;
     flex-direction: column;
     justify-content: flex-end;

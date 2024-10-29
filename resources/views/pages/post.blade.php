@@ -11,6 +11,7 @@
 @endsection
 
 @section('content')
+
 <!------------------- BREADCRUMB ------------------->
 <section class="sec-breadcrumb">
     <div class="container">

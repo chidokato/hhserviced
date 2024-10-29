@@ -7,16 +7,20 @@
 
 @section('css')
 <!-- css project -->
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 <link href="assets/css/project.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
 @endsection
 
 @section('content')
-
+@include('layout.header-page')
 <section class="sec-img bg">
     <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper-product">
         <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="data/images/{{$post->img}}" />
+            </div>
+            <div class="swiper-slide">
+                <img src="data/images/{{$post->img}}" />
+            </div>
             <div class="swiper-slide">
                 <img src="data/images/{{$post->img}}" />
             </div>
@@ -31,6 +35,12 @@
     </div>
     <div thumbsSlider="" class="swiper mySwiper-product-thumr">
         <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="data/images/{{$post->img}}" />
+            </div>
+            <div class="swiper-slide">
+                <img src="data/images/{{$post->img}}" />
+            </div>
             <div class="swiper-slide">
                 <img src="data/images/{{$post->img}}" />
             </div>
