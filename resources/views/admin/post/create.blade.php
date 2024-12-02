@@ -46,9 +46,15 @@
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Danh mục</label>
-                        <div class="col-sm-10">
+                        <div class="col-sm-10 input-group">
                             <select name='category_id' class="form-control select2" id="category">
                                 <?php addeditcat ($category,0,$str='',old('parent')); ?>
+                            </select>
+                            <select name="parent" class="form-control select2">
+                                <option value="0">-Root-</option>
+                                @foreach($posts as $val)
+                                <option value="{{$val->id}}">{{$val->name}}</option>
+                                @endforeach
                             </select>
                         </div>
                     </div>

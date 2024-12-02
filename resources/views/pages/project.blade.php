@@ -8,88 +8,79 @@
 @section('css')
 <!-- css project -->
 <link href="assets/css/project.css" rel="stylesheet">
+<link href="assets/css/simpleLightbox.css" rel="stylesheet">
 @endsection
 
 @section('content')
 @include('layout.header-page')
-<section class="sec-img bg">
-    <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper-product">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="data/images/{{$post->img}}" />
-            </div>
-            <div class="swiper-slide">
-                <img src="data/images/{{$post->img}}" />
-            </div>
-            <div class="swiper-slide">
-                <img src="data/images/{{$post->img}}" />
-            </div>
-            @foreach($post->Images as $img)
-            <div class="swiper-slide">
-                <img src="data/images/{{$img->img}}" />
-            </div>
-            @endforeach
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-    </div>
-    <div thumbsSlider="" class="swiper mySwiper-product-thumr">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="data/images/{{$post->img}}" />
-            </div>
-            <div class="swiper-slide">
-                <img src="data/images/{{$post->img}}" />
-            </div>
-            <div class="swiper-slide">
-                <img src="data/images/{{$post->img}}" />
-            </div>
-            @foreach($post->Images as $img)
-            <div class="swiper-slide">
-                <img src="data/images/{{$img->img}}" />
-            </div>
-            @endforeach
-        </div>
-    </div>
-</section>
 
+<div class="project">
 
 <div class="container">
     <div class="row">
         <div class="col-md-12">
             <nav aria-label="breadcrumb" class="main-breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{asset('')}}">Indochine</a></li>
+                    <li class="breadcrumb-item"><a href="{{asset('')}}">H&H Serviced Apartments</a></li>
                     <li class="breadcrumb-item"><a href="{{$post->category->slug}}">{{$post->category->name}}</a></li>
                     <li class="breadcrumb-item active" aria-current="page">{{$post->name}}</li>
                 </ol>
-                <div class="sub">
-                    @if($post->monopoly == 1)<span class="bg-secondary">Độc quyền <i class="ms-1 icon-check"></i></span>@endif
-                    @if($post->for_sale == 1)<span class="bg-secondary">Đang mở bán <i class="ms-1 icon-check"></i></span>@endif
-                    @if($post->new_product == 1)<span class="bg-secondary">Mới ra mắt <i class="ms-1 icon-check"></i></span>@endif
-                </div>
             </nav>
+        </div>
+    </div>
+</div>
+
+<!------------------- MORE ------------------->
+<section class="sec-gallery">
+    <div class="container">
+        <div class="">
+            <div class="row g-3">
+                <div class="col-lg-6">
+                    <a class="card-overlay outline-effect video" title="1/10" href="https://www.youtube.com/embed/93JJbwWz154?autoplay=true&muted=true">
+                        <span class="card-overlay-img"><img src="assets/images/space-4.gif" alt="" class="w-100" style="background-image: url('https://top10tphcm.com/wp-content/uploads/2018/06/New-city-min.jpg');"></span>
+                        <div class="card-overlay-body">
+                            <div>Căn hộ Roman Plaza</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card-overlay-flex">
+                        <a class="card-overlay card-overlay-sm outline-effect" title="2/10" href="https://top10tphcm.com/wp-content/uploads/2018/06/New-city-min.jpg">
+                            <span class="card-overlay-img"><img src="assets/images/space-4.gif" alt="" class="w-100" style="background-image: url('https://top10tphcm.com/wp-content/uploads/2018/06/New-city-min.jpg');"></span>
+                        </a>
+                        <a class="card-overlay card-overlay-sm outline-effect" title="3/10" href="https://top10tphcm.com/wp-content/uploads/2018/06/New-city-min.jpg">
+                            <span class="card-overlay-img"><img src="assets/images/space-4.gif" alt="" class="w-100" style="background-image: url('https://top10tphcm.com/wp-content/uploads/2018/06/New-city-min.jpg');"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card-overlay-flex">
+                        <a class="card-overlay card-overlay-sm outline-effect" title="4/10" href="https://top10tphcm.com/wp-content/uploads/2018/06/New-city-min.jpg">
+                            <span class="card-overlay-img"><img src="assets/images/space-4.gif" alt="" class="w-100" style="background-image: url('https://top10tphcm.com/wp-content/uploads/2018/06/New-city-min.jpg');"></span>
+                        </a>
+                        <a class="card-overlay card-overlay-sm outline-effect more" title="5/10" href="https://blog.rever.vn/hubfs/chinh-sach-ho-tro-tai-chinh-kich-cau-thi-truong-bat-dong-san-cuoi-nam-1.jpg">
+                            <span class="card-overlay-img"><img src="assets/images/space-4.gif" alt="" class="w-100" style="background-image: url('https://blog.rever.vn/hubfs/chinh-sach-ho-tro-tai-chinh-kich-cau-thi-truong-bat-dong-san-cuoi-nam-1.jpg');"></span>
+                            <i class="btn-plus"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="more-item">
+                    <a class="card-overlay" title="6/10" href="https://top10tphcm.com/wp-content/uploads/2018/06/New-city-min.jpg"></a>
+                    <a class="card-overlay" title="7/10" href="https://top10tphcm.com/wp-content/uploads/2018/06/New-city-min.jpg"></a>
+                    <a class="card-overlay" title="8/10" href="https://top10tphcm.com/wp-content/uploads/2018/06/New-city-min.jpg"></a>
+                    <a class="card-overlay" title="9/10" href="https://top10tphcm.com/wp-content/uploads/2018/06/New-city-min.jpg"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container mb-3">
+    <div class="row">
+        <div class="col-lg-8">
             <div class="heading">
                 <div class="left">
                     <h1 class="text-uppercase title-cat">{{$post->name}}</h1>
-                    <div class="address"><i class="icon-location me-1"></i> {{$post->address}}{{ $post->street_id ? ', '.$post->Street->name:'' }}{{$post->ward_id? ', '.$post->Ward->name:''}}{{', '.$post->District->name}}{{', '.$post->Province->name}} <a href="">Xem trên bản đồ</a></div>
-                </div>
-                <div class="right">
-                    <div class="price"> <span style="font-size: 1.2rem;">Giá: </span>
-                        {{$post->price >= 1000000000?$post->price/1000000000 . ' Tỷ': ($post->price? $post->price/1000000 . ' Triệu':'Liên hệ') }}
-                        {{$post->price_max >= 1000000000? ' - ' . $post->price_max/1000000000 . ' Tỷ':($post->price_max?' - ' . $post->price_max/1000000 . ' Triệu':'')}}
-                    </div>
-                    <div class="price_acreage">
-                        @if($post->unit=='Tỷ')
-                        {{ $post->acreage ? number_format($post->price*1000000000/$post->acreage/1000000, 2) : '...'}} triệu/m<sup>2</sup>
-                        @elseif($post->unit=='Triệu')
-                        <?php 
-                            if ($post->acreage) {
-                                echo number_format($post->price/$post->acreage);
-                            }
-                        ?>
-                        @endif
-                    </div>
                 </div>
             </div>
             <div class="status">
@@ -97,243 +88,105 @@
                 <span> {!! $post->bedroom ? '<i class="icon-bed me-1"></i>'.$post->bedroom.($post->bedroom_max ? ' - '.$post->bedroom_max : '').' PN' : '' !!}</span>
                 <span> {!! $post->wc ? '<i class="icon-bathroom me-1"></i>'.$post->wc.($post->wc_max ? ' - '.$post->wc_max : '').' WC' : '' !!}</span>
             </div>
-            <hr>
-        </div>
-    </div>
-</div>
-<div class="container">
-    <div class="row">
-        <div class="col-md-9">
-            <div class="detail bg">
+        
+            <div class="content">
                 {!! $post->content !!}
             </div>
-            <?php $matbang = 0; ?>
-            @foreach($sections as $key => $section)
-            @if($section->status == 1)
-            <div class="main-content">
-                <div class="content-text">
-                    <h2>{{$section->heading}}</h2>
-                    {!! $section->content !!}
-                </div>
-                <div class="content-img">
-                    @if(count($section->Images) > 1)
-                    <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper slider-section">
-                        <div class="swiper-wrapper">
-                            @foreach($section->Images as $img)
-                            <div class="swiper-slide">
-                                <img src="data/images/{{$img->img}}" />
-                            </div>
-                            @endforeach
-                        </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                    </div>
-                    <div thumbsSlider="" class="swiper slider-section-thumbs">
-                        <div class="swiper-wrapper">
-                            @foreach($section->Images as $img)
-                            <div class="swiper-slide">
-                                <img src="data/images/{{$img->img}}" />
-                            </div>
-                            @endforeach
-                        </div>
-                    </div>
-                    @elseif(count($section->Images) == 1) 
-                        @foreach($section->Images as $img)
-                        <div class="img"><img src="data/images/{{$img->img}}" /></div>
-                        @endforeach
-                    @else
-
-                    @endif
-                </div>
-            </div>
-            @elseif($section->status == 2)
-            <div class="main-content">
-                <div class="content-text">
-                    <h2>{{$section->heading}}</h2>
-                    {!! $section->content !!}
-                </div>
-                <div class="content-img">
-                    @if(count($section->Images) > 0)
-                    <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper slider-section">
-                        <div class="swiper-wrapper">
-                            @foreach($section->Images as $img)
-                            <div class="swiper-slide">
-                                <img src="data/images/{{$img->img}}" />
-                            </div>
-                            @endforeach
-                        </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                    </div>
-                    <div thumbsSlider="" class="swiper slider-section-thumbs">
-                        <div class="swiper-wrapper">
-                            @foreach($section->Images as $img)
-                            <div class="swiper-slide">
-                                <img src="data/images/{{$img->img}}" />
-                            </div>
-                            @endforeach
-                        </div>
-                    </div>
-                    @endif
-                </div>
-            </div>
-            @elseif($section->status == 3) <!-- Mặt bằng -->
-            <div class="main-content">
-                <h2>{{$section->heading}}</h2>
-                {!! $section->content !!}
-                <div class="matbang">
-                    <div class="tab swiper menu-tab">
-                        <div class="swiper-wrapper">
-                            @foreach($section->Images as $key => $img)
-                            <button class="swiper-slide tablinks {{$key==0?'active':''}}" onclick="openTab(event, 'Tab{{$img->id}}')"> <span>{{$img->name}}</span> </button>
-                            @endforeach
-                        </div>
-                    </div>
-                    @foreach($section->Images as $key => $img)
-                    <div id="Tab{{$img->id}}" class="tabcontent {{$key==0?'active':''}}" style="{{$key==0?'display: block;':''}}">
-                        <div class="card-overlay-flex">
-                            <a class="card-overlay" data-fancybox="matbang" href="data/images/{{$img->img}}" title="2/4">
-                                <span class="card-overlay-img"><img src="data/images/{{$img->img}}" alt="" class="w-100"></span>
-                            </a>
-                        </div>
-                    </div>
-
-                    @endforeach
-                </div>
-            </div>
-            <?php $matbang = count($section->Images); ?>
-            @endif
-            @endforeach
-            
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
             <div class="fixtop">
-                <div class="right-sidebar">
-                    <div class="top">
-                        <div class="avatar">
-                            <img src="assets/images/logo-01_45.png">
-                        </div>
-                        <div class="right">
-                            <h5>Liên hệ tư vấn</h5>
-                            <p>Chuyên viên tư vấn đã sãn sàng hỗ trợ</p>
-                        </div>
-                    </div>
-                    <div class="hotline"> <a href="tel:{{$setting->hotline}}"><i class="icon-phone"></i> {{$setting->hotline}}</a> </div>
+                <div class="google-maps">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29793.988211049866!2d105.8369637!3d21.022739599999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab9bd9861ca1%3A0xe7887f7b72ca17a9!2zSMOgIE7hu5lp!5e0!3m2!1svi!2s!4v1730256923424!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                <div class="pupup">
-                    <button> <img src="assets/images/icon-document-register.svg"> Đăng ký nhận tài liệu dự án</button>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-</div>
-<!-- @foreach($sections as $key => $section)
-@if($section->status == 0)
-<div class="main-content container">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="content-text">
-                <h2>{{$section->heading}}</h2>
-                {!! $section->content !!}
-            </div>
-        </div>
-        <div class="col-md-12">
-            <div class="content-img">
-                @if(count($section->Images)>1)
-                <div class="swiper mySwiper-section-2">
-                    <div class="swiper-wrapper">
-                        @foreach($section->Images as $img)
-                        <div class="swiper-slide"><img src="data/product/detail/{{$img->img}}"></div>
-                        @endforeach
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-                @else
-                <div class="img">
-                    <img src="data/product/detail/{{$img->img}}">
-                </div>
-                @endif
+                <div class="address"><i class="icon-location me-1"></i> {{$post->address}}{{ $post->street_id ? ', '.$post->Street->name:'' }}{{$post->ward_id? ', '.$post->Ward->name:''}}{{', '.$post->District->name}}{{', '.$post->Province->name}} <a href="">Xem trên bản đồ</a></div>
             </div>
         </div>
     </div>
 </div>
-@elseif($section->status == 1)
-<div class="main-content section-chan">
-    <div class="row">
-        <div class="col-md-6 col-left">
-            <div class="content-text">
-                <h2>{{$section->heading}}</h2>
-                {!! $section->content !!}
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="content-img">
-                <div class="swiper mySwiper-section-1">
-                    <div class="swiper-wrapper">
-                        @foreach($section->Images as $img)
-                        <div class="swiper-slide"><img src="data/product/detail/{{$img->img}}"></div>
-                        @endforeach
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@elseif($section->status == 2)
-<div class="main-content section-le">
-    <div class="row">
-        <div class="col-md-6 col-left">
-            <div class="content-text">
-                <h2>{{$section->heading}}</h2>
-                {!! $section->content !!}
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="content-img">
-                <div class="swiper mySwiper-section-1">
-                    <div class="swiper-wrapper">
-                        @foreach($section->Images as $img)
-                        <div class="swiper-slide"><img src="data/product/detail/{{$img->img}}"></div>
-                        @endforeach
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@elseif($section->status == 3)
-2
-@endif
-@endforeach -->
 
+<div class="container">
+    <div class="heading">
+        <div class="left">
+            <h2 class="text-uppercase title-cat">Lựa chọn phòng dành cho bạn</h2>
+        </div>
+    </div>
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-3 g-3 g-lg-3 grid-view mb-5">
+        <div class="col">
+            <div class="card card-s card-s4">
+                <a href="#" data-id="2" class="project-Toggler">
+                    <div class="swiper mySwiper-cat">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="https://img.mvillage.vn/J30sZj4GhIf7INEwQ1u5QtTAHNJ83UGGqILHLoUidt4/rs:fit:500:500/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_1255624492_da08bf6fc4.jpg"></div>
+                            <div class="swiper-slide"><img src="https://img.mvillage.vn/gzBUaRKO9fmzVFZtNwaGgRjHdBBSqf_HK6lGVftntmU/rs:fit:500:500/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_2580220616_c96d8a75bb.jpg"></div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <!-- <div class="swiper-pagination"></div> -->
+                    </div>
+                    <div class="product-status">
+                        <span><i class="icon-acreage me-1"></i>50m2</span>
+                        <span><i class="icon-bed me-1"></i>2PN</span>
+                        <span><i class="icon-bathroom me-1"></i>2WC</span>
+                    </div>
+                </a>
+                <div class="card-body">
+                    <div class="card-body-wrap">
+                        <h5 class="card-title"><a href="#" data-id="2" class="text-truncate project-Toggler">Newtatco Xuân Đỉnh</a></h5>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-price">
+                            <div>Chỉ từ</div>
+                            <div class="price"><span>1.600.000</span> Đồng/Đêm</div>
+                            <span>Đã bao gồm thuế và phí</span>
+                        </div>
+                        <button>Đăt phòng</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="overlay"></div>
+<div class="ditail-project">
+    <div class="close"><button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button></div>
+    <div class="row">
+        <div class="col-md-12">
+            <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper-product">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="https://img.mvillage.vn/gzBUaRKO9fmzVFZtNwaGgRjHdBBSqf_HK6lGVftntmU/rs:fit:500:500/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_2580220616_c96d8a75bb.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://img.mvillage.vn/b_SyeB1r5D9PF2SOCqWxMeGz63jVCPbxlejxdR24dDM/rs:fit:1500:1500/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_167661211_10aee3ebb5.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://img.mvillage.vn/gzBUaRKO9fmzVFZtNwaGgRjHdBBSqf_HK6lGVftntmU/rs:fit:500:500/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_2580220616_c96d8a75bb.jpg" />
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <div thumbsSlider="" class="swiper mySwiper-product-thumr">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="https://img.mvillage.vn/gzBUaRKO9fmzVFZtNwaGgRjHdBBSqf_HK6lGVftntmU/rs:fit:500:500/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_2580220616_c96d8a75bb.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://img.mvillage.vn/gzBUaRKO9fmzVFZtNwaGgRjHdBBSqf_HK6lGVftntmU/rs:fit:500:500/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_2580220616_c96d8a75bb.jpg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
 @endsection
 
 @section('js')
 <!-- js project -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-
+<script src="js/simpleLightbox.min.js"></script>
 <script src="assets/js/project.js"></script>
-<script type="text/javascript">
-    var swiper = new Swiper(".menu-tab", {
-        spaceBetween: 10,
-        slidesPerView: {{ isset($matbang) && $matbang>5 ? 6:$matbang }},
-        pagination: {
-            el: ".swiper-pagination",
-        },
-    });
-</script>
-<script>
-    $(document).ready(function() {
-        $("[data-fancybox='gallery']").fancybox({
-            thumbs: {
-                autoStart: true,  // Hiển thị thumbnails ngay khi mở
-                axis: 'x'         // Hiển thị thumbnails ở phía dưới
-            }
-        });
-    });
-</script>
 @endsection

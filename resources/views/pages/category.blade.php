@@ -57,7 +57,7 @@
                     @foreach($posts as $key => $val)
                         <div class="col">
                             <div class="card card-s ChICl">
-                                <a href="#">
+                                <a href="{{$val->category->slug}}/{{$val->slug}}">
                                     <span class="cat">
                                         <span class="room-status">Đã sử dụng</span>
                                     </span>
@@ -77,7 +77,7 @@
                                 <div class="card-body">
                                     <div class="card-body-wrap">
                                         <div class="cat-name"><span>{{$val->Province->name}}</span></div>
-                                        <h5 class="card-title"><a href="#" class="text-truncate">{{$val->name}}</a></h5>
+                                        <h5 class="card-title"><a href="{{$val->category->slug}}/{{$val->slug}}" class="text-truncate">{{$val->name}}</a></h5>
                                         <div class="card-info">
                                             <span><i class="icon-location me-2"></i>Nam Từ Liêm, Hà Nội</span>
                                         </div>
@@ -96,7 +96,7 @@
                                     <div class="sc-gjNHFA hTuhhX">Liên hệ</div>
                                     <span class="sc-fmciRz flxGLN">Đồng / Đêm</span>
                                     <div class="sc-iFMAIt bSRrbj">Đã bao gồm thuế và phí</div>
-                                    <div class="sc-eWfVMQ crMWDy mt-4"><button class="sc-dwsnSq isREzM primary-btn">Chọn phòng</button></div>
+                                    <div class="sc-eWfVMQ crMWDy mt-4"><a href="{{$val->category->slug}}/{{$val->slug}}"><button class="sc-dwsnSq isREzM primary-btn">Chọn phòng</button></a></div>
                                 </div>
                             </div>
                         </div>

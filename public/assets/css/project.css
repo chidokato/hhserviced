@@ -98,7 +98,7 @@
 }
 .bg{ background-color:#f0f0f061  }
 .main-breadcrumb{ display:flex;     align-items: center;
-    justify-content: space-between; margin-bottom:1rem }
+    justify-content: space-between;  }
 
 .detail{ padding:20px; border-radius:5px; margin-bottom:1rem }
 .detail ul{ display:flex; flex-direction: column; }
@@ -202,13 +202,7 @@
 .content-text table tr:last-child{ border: none; }
 
 
-.card-overlay-flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
-}
+.sec-gallery{ background:none }
 
 .card-overlay {
     display: block;
@@ -221,10 +215,73 @@
     height: auto;
 }
 
+.breadcrumb .breadcrumb-item {
+    padding: 12px 0 12px;
+}
+
 .card-overlay:hover .card-overlay-img img {
     transform: scale(1.1);
 }
 
+.bg-fff{ background:#fff }
+
+.google-maps iframe{ width:100%; height:300px }
+
+.product-status span {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1.4rem;
+    line-height: 1;
+}
+.product-status span i {
+    font-size: 1.4rem; margin-right: 6px !important;
+}
+.product-status{ z-index:9 }
+
+.card-footer{ font-size:1.1rem }
+.card-footer .price{ margin-top:.5rem }
+.card-footer .price span{ font-size:1.6rem; color:var(--sub-color); font-weight:bold; margin-right:.5rem }
+.card-footer .card-price>span{ font-size:.7rem; color:#8b8d90 }
+.card-footer button{ background:var(--sub-color); border:none; padding:8px 15px; color:#fff; border-radius:20px }
+
+.ditail-project {
+    background: #fff;
+    position: fixed;
+    width: 60%;
+    height: 100vh;
+    top: 0;
+    z-index: 9999;
+    right: -60%;
+    transition-property: all;
+    transition-duration: 0.2s;
+}
+.ditail-project.active {
+    right: 0;
+    transition-property: all;
+    transition-duration: 0.2s;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Màu đen mờ */
+    z-index: 10; /* Đảm bảo nó ở trên nền */
+    display: none; /* Ẩn overlay khi chưa cần */
+}
+
+.ditail-project.active + .overlay {
+    display: block; /* Hiển thị overlay khi có .active */
+}
+
+.ditail-project .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 20; /* Đảm bảo nút nằm phía trên */
+}
 
 @media (min-width: 992px) {
   .main-content .row .col-left{ width:480px; display:flex; align-items: flex-start; }

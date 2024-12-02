@@ -110,7 +110,7 @@
 .card-overlay-sm .card-overlay-body .time-box span:nth-of-type(1) {font-size: 20px;padding-bottom: 0px;letter-spacing: -.2px;}
 .card-overlay-sm .card-overlay-body p {font-size:14px;line-height:1.4;margin-top: -2px;}
 
-.card-overlay-flex {display: flex;flex-direction: column;justify-content: space-between; margin-bottom: 5%}
+.card-overlay-flex {display: flex;flex-direction: column;justify-content: space-between; height: 100%}
 
 .news-hightlight .col-lg-3:nth-of-type(1) .card-overlay-flex:nth-of-type(1){ height:60% }
 .news-hightlight .col-lg-3:nth-of-type(1) .card-overlay-flex:nth-of-type(2){ height:35% }

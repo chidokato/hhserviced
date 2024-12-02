@@ -148,3 +148,52 @@ function openTab(evt, tabName) {
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
 }
+
+
+$(".project-Toggler").click(function(event) {
+    event.preventDefault();
+    $(".ditail-project").toggleClass("active");
+    $(".overlay").toggle();
+});
+$(".overlay").click(function() {
+    $(".ditail-project").removeClass("active");
+    $(this).hide();
+});
+$(".close .btn-close").click(function(event) {
+    event.preventDefault();
+    $(".ditail-project").removeClass("active");
+    $(".overlay").hide();
+});
+
+$(document).ready(function() {
+    $("[data-fancybox='gallery']").fancybox({
+        thumbs: {
+            autoStart: true,  // Hiển thị thumbnails ngay khi mở
+            axis: 'x'         // Hiển thị thumbnails ở phía dưới
+        }
+    });
+});
+
+var swiper = new Swiper(".swiper.gallery-mobile", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    pagination: {
+        el: ".swiper.gallery-mobile .swiper-pagination",
+        clickable: true,
+    },  
+});
+var lightbox = new SimpleLightbox({
+    elements: '.sec-gallery .card-overlay',
+});
+
+var swiper = new Swiper(".mySwiper-cat", {
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  spaceBetween: 5, 
+});

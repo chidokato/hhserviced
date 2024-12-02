@@ -91,9 +91,11 @@ class PostController extends Controller
     {
         $province = Province::get();
         $category = Category::where('sort_by', 'Product')->orderBy('view', 'DESC')->get();
+        $posts = Post::where('sort_by', 'Product')->where('parent', 0)->get();
         return view('admin.post.create')->with(compact(
             'province',
             'category',
+            'posts',
         ));
     }
 
@@ -114,6 +116,7 @@ class PostController extends Controller
         $post->name = $data['name'];
         $post->slug = Str::slug($data['name'], '-');
         $post->category_id = $data['category_id'];
+        $post->parent = $data['parent'];
         
         $post->price = str_replace('.', '', $data['price']);
         $post->price_max = str_replace('.', '', $data['price_max']);
@@ -222,6 +225,7 @@ class PostController extends Controller
         $district = District::where('province_id', $data->province_id)->get();
         $ward = Ward::where('district_id', $data->district_id)->get();
         $street = Street::where('district_id', $data->district_id)->get();
+        $posts = Post::where('sort_by', 'Product')->where('parent', 0)->get();
         return view('admin.post.edit')->with(compact(
             'category',
             'data',
@@ -231,6 +235,7 @@ class PostController extends Controller
             'district',
             'ward',
             'street',
+            'posts',
         ));
     }
 
@@ -250,6 +255,7 @@ class PostController extends Controller
         $post->slug = $data['slug'];
         $post->content = $data['content0'];
         $post->category_id = $data['category_id'];
+        $post->parent = $data['parent'];
         
         $post->price = str_replace('.', '', $data['price']);
         $post->price_max = str_replace('.', '', $data['price_max']);
