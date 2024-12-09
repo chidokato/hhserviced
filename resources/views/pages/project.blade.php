@@ -111,12 +111,13 @@
         </div>
     </div>
     <div class="row row-cols-2 row-cols-md-3 row-cols-lg-3 g-3 g-lg-3 grid-view mb-5">
+        @foreach($posts as $val)
         <div class="col">
             <div class="card card-s card-s4">
                 <a href="#" data-id="2" class="project-Toggler">
                     <div class="swiper mySwiper-cat">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="https://img.mvillage.vn/J30sZj4GhIf7INEwQ1u5QtTAHNJ83UGGqILHLoUidt4/rs:fit:500:500/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_1255624492_da08bf6fc4.jpg"></div>
+                            <div class="swiper-slide"><img src="data/images/{{$val->img}}"></div>
                             <div class="swiper-slide"><img src="https://img.mvillage.vn/gzBUaRKO9fmzVFZtNwaGgRjHdBBSqf_HK6lGVftntmU/rs:fit:500:500/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_2580220616_c96d8a75bb.jpg"></div>
                         </div>
                         <div class="swiper-button-next"></div>
@@ -144,6 +145,7 @@
                 </div>
             </div>
         </div>
+        @endforeach
     </div>
 </div>
 </div>

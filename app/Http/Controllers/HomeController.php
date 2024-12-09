@@ -76,7 +76,7 @@ class HomeController extends Controller
                 $provinces = Province::get();
 
                 $cat_array = $request->input('categories', $cat_array);
-                $query = Post::query()->orderBy('id', 'DESC');
+                $query = Post::query()->orderBy('id', 'DESC')->where('parent',0);
                 if ($key = $request->get('key', '')) {
                     $query->where('name', 'like', '%' . $key . '%');
                 }
@@ -121,12 +121,12 @@ class HomeController extends Controller
     public function post($catslug, $slug)
     {
         $post = Post::where('slug', $slug)->first();
-        $sections = Section::where('post_id', $post->id)->orderBy('stt', 'asc')->get();
+        $posts = Post::where('parent', $post->id)->get();
         $related_post = Post::where('category_id', $post->category_id)->whereNotIn('id', [$post->id])->orderBy('id', 'desc')->take(10)->get();
         if ($post->sort_by == 'Product') {
             return view('pages.project', compact(
                 'post',
-                'sections',
+                'posts',
                 'related_post',
             ));
         }elseif ($post->sort_by == 'News') {
