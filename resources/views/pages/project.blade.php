@@ -118,21 +118,20 @@
                     <div class="swiper mySwiper-cat">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide"><img src="data/images/{{$val->img}}"></div>
-                            <div class="swiper-slide"><img src="https://img.mvillage.vn/gzBUaRKO9fmzVFZtNwaGgRjHdBBSqf_HK6lGVftntmU/rs:fit:500:500/plain/https%3A%2F%2Fcdn-v2.mvillage.vn%2Fcms%2Fimage_2580220616_c96d8a75bb.jpg"></div>
                         </div>
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
                         <!-- <div class="swiper-pagination"></div> -->
                     </div>
                     <div class="product-status">
-                        <span><i class="icon-acreage me-1"></i>50m2</span>
+                        <span><i class="icon-acreage me-1"></i>{{$val->acreage}}-{{$val->acreage_max}}m2</span>
                         <span><i class="icon-bed me-1"></i>2PN</span>
                         <span><i class="icon-bathroom me-1"></i>2WC</span>
                     </div>
                 </a>
                 <div class="card-body">
                     <div class="card-body-wrap">
-                        <h5 class="card-title"><a href="#" data-id="2" class="text-truncate project-Toggler">Newtatco Xuân Đỉnh</a></h5>
+                        <h5 class="card-title"><a href="#" data-id="2" class="text-truncate project-Toggler">{{$val->name}}</a></h5>
                     </div>
                     <div class="card-footer">
                         <div class="card-price">
