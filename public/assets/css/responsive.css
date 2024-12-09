@@ -47,7 +47,7 @@
     .sales-sec, .news-sec{ padding-top:0px }
     .navbar>.container{ flex-wrap: nowrap; }
     #sale-search{ display:none; }
-
+    .cover-title-home h2{  }
 }
 
 
