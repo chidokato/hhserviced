@@ -143,7 +143,7 @@
                     <div class="card-footer">
                         <div class="card-price">
                             <div>{{__('lang.hnh-7')}}</div>
-                            <div class="price"><span>{{$val->price}}</span>VNĐ/NGÀY</div>
+                            <div class="price"><span>{{ number_format($val->price) }}</span>VNĐ/NGÀY</div>
                             <span>{{__('lang.hnh-8')}}</span>
                         </div>
                         <button>{{__('lang.hnh-2')}}</button>
