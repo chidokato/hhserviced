@@ -29,12 +29,14 @@ class HomeController extends Controller
 {
     public function __construct()
     {
+        $locale = session()->get('locale', 'vi');
+        
         $this->setting = Cache::remember('setting', 60, function () {
             return Setting::find('1');
         });
 
-        $this->menu = Cache::remember('menu', 60, function () {
-            return Menu::orderBy('view', 'asc')->get();
+        $this->menu = Cache::remember('menu', 60, function () use ($locale) {
+            return Menu::where('lang', $locale)->orderBy('view', 'asc')->get();
         });
 
         view()->share([

@@ -35,12 +35,10 @@ Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']
  });
 
 Route::get('lang/{locale}', function ($locale) {
-    // Kiểm tra nếu ngôn ngữ hợp lệ, ví dụ 'en', 'vi', 'cn'
     if (in_array($locale, ['en', 'vi', 'cn'])) {
         session(['locale' => $locale]);
     }
-
-    return redirect()->back();  // Quay lại trang trước đó
+    return redirect()->back();
 });
 
 

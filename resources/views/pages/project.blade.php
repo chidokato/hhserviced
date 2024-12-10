@@ -36,39 +36,44 @@
         <div class="">
             <div class="row g-3">
                 <div class="col-lg-6">
-                    <a class="card-overlay outline-effect video" title="1/10" href="https://www.youtube.com/embed/93JJbwWz154?autoplay=true&muted=true">
+                    <!-- <a class="card-overlay outline-effect video" title="1/10" href="https://www.youtube.com/embed/93JJbwWz154?autoplay=true&muted=true">
                         <span class="card-overlay-img"><img src="assets/images/space-4.gif" alt="" class="w-100" style="background-image: url('https://top10tphcm.com/wp-content/uploads/2018/06/New-city-min.jpg');"></span>
                         <div class="card-overlay-body">
                             <div>Căn hộ Roman Plaza</div>
                         </div>
+                    </a> -->
+                    <a class="card-overlay card-overlay-sm outline-effect" title="2/10" href="data/images/{{$post->img}}">
+                        <span class="card-overlay-img"><img src="assets/images/space-4.gif" alt="" class="w-100" style="background-image: url('data/images/{{$post->img}}');"></span>
                     </a>
                 </div>
                 <div class="col-lg-3">
                     <div class="card-overlay-flex">
-                        <a class="card-overlay card-overlay-sm outline-effect" title="2/10" href="https://top10tphcm.com/wp-content/uploads/2018/06/New-city-min.jpg">
-                            <span class="card-overlay-img"><img src="assets/images/space-4.gif" alt="" class="w-100" style="background-image: url('https://top10tphcm.com/wp-content/uploads/2018/06/New-city-min.jpg');"></span>
+                        @foreach($post->Images as $key => $val)
+                        @if($key < 3)
+                        <a class="card-overlay card-overlay-sm outline-effect" title="2/10" href="data/images/{{$val->img}}">
+                            <span class="card-overlay-img"><img src="assets/images/space-4.gif" alt="" class="w-100" style="background-image: url('data/images/{{$val->img}}');"></span>
                         </a>
-                        <a class="card-overlay card-overlay-sm outline-effect" title="3/10" href="https://top10tphcm.com/wp-content/uploads/2018/06/New-city-min.jpg">
-                            <span class="card-overlay-img"><img src="assets/images/space-4.gif" alt="" class="w-100" style="background-image: url('https://top10tphcm.com/wp-content/uploads/2018/06/New-city-min.jpg');"></span>
-                        </a>
+                        @endif
+                        @endforeach
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="card-overlay-flex">
-                        <a class="card-overlay card-overlay-sm outline-effect" title="4/10" href="https://top10tphcm.com/wp-content/uploads/2018/06/New-city-min.jpg">
-                            <span class="card-overlay-img"><img src="assets/images/space-4.gif" alt="" class="w-100" style="background-image: url('https://top10tphcm.com/wp-content/uploads/2018/06/New-city-min.jpg');"></span>
+                        @foreach($post->Images as $key => $val)
+                        @if($key < 5 && $key > 2)
+                        <a class="card-overlay card-overlay-sm outline-effect" title="2/10" href="data/images/{{$val->img}}">
+                            <span class="card-overlay-img"><img src="assets/images/space-4.gif" alt="" class="w-100" style="background-image: url('data/images/{{$val->img}}');"></span>
                         </a>
-                        <a class="card-overlay card-overlay-sm outline-effect more" title="5/10" href="https://blog.rever.vn/hubfs/chinh-sach-ho-tro-tai-chinh-kich-cau-thi-truong-bat-dong-san-cuoi-nam-1.jpg">
-                            <span class="card-overlay-img"><img src="assets/images/space-4.gif" alt="" class="w-100" style="background-image: url('https://blog.rever.vn/hubfs/chinh-sach-ho-tro-tai-chinh-kich-cau-thi-truong-bat-dong-san-cuoi-nam-1.jpg');"></span>
-                            <i class="btn-plus"></i>
-                        </a>
+                        @endif
+                        @endforeach
                     </div>
                 </div>
                 <div class="more-item">
+                    @foreach($post->Images as $val)
+                    @if($key > 4)
                     <a class="card-overlay" title="6/10" href="https://top10tphcm.com/wp-content/uploads/2018/06/New-city-min.jpg"></a>
-                    <a class="card-overlay" title="7/10" href="https://top10tphcm.com/wp-content/uploads/2018/06/New-city-min.jpg"></a>
-                    <a class="card-overlay" title="8/10" href="https://top10tphcm.com/wp-content/uploads/2018/06/New-city-min.jpg"></a>
-                    <a class="card-overlay" title="9/10" href="https://top10tphcm.com/wp-content/uploads/2018/06/New-city-min.jpg"></a>
+                    @endif
+                    @endforeach
                 </div>
             </div>
         </div>
