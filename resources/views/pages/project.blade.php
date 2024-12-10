@@ -124,7 +124,7 @@
                         <!-- <div class="swiper-pagination"></div> -->
                     </div>
                     <div class="product-status">
-                        <span><i class="icon-acreage me-1"></i>{{$val->acreage}}{{$val->acreage_max ? '-'.$val->acreage_max;''}}m2</span>
+                        <span><i class="icon-acreage me-1"></i>{{$val->acreage}}{{$val->acreage_max ? '-'.$val->acreage_max:''}}m2</span>
                         <span><i class="icon-bed me-1"></i>{{$val->bedroom}}PN</span>
                         <span><i class="icon-bathroom me-1"></i>{{$val->wc}}WC</span>
                     </div>
