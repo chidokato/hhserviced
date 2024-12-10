@@ -347,82 +347,37 @@ header.active .navbar-expand-lg .navbar-nav .dropdown .dropdown-menu{ top: 64px;
 
 
 /*ngôn ngữ*/
-
-/* Container */
-.language-selector {
-    position: relative;
-    display: inline-block;margin-left: 20px;
-}
-
-/* Button styling */
-.lang-btn {
-    background: none;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.lang-btn img {
-    width: 20px;
-    height: 20px;
-    object-fit: cover;
-    border-radius: 4px;
-}
-
-/* Dropdown menu styling */
+.language-selector{  }
 .lang-dropdown {
-    display: none; /* Hidden by default */
+    display: none;
     position: absolute;
     background-color: white;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    list-style-type: none;
+    border: 1px solid #ccc;
+    list-style: none;
     padding: 0;
-    margin: 5px 0 0;
-    border-radius: 5px;
-    z-index: 10;
-    text-align: left;
+    margin: 0;
+    z-index: 1000;
+    margin-top: 10px;
+    
 }
 
 .lang-dropdown li {
-    padding: 10px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    padding:10px 5px;
+    cursor: pointer; 
 }
 
-.lang-dropdown li img {
-    width: 20px;
-    height: 15px;
-    object-fit: cover;
-    border-radius: 4px;
-}
-
-.lang-dropdown li a {
-    text-decoration: none;
-    color: black;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 14px;
-}
-
-/* Highlight on hover */
 .lang-dropdown li:hover {
     background-color: #f0f0f0;
 }
 
-/* Show dropdown when active */
-.language-selector.active .lang-dropdown {
-    display: block;
+.lang-dropdown.show {
+    display: flex;flex-direction: column;
 }
 
+.lang-btn {
+    cursor: pointer;
+}
 
-.language-selector button{ padding:0 }
-.language-selector img{ width:30px}
+.language-selector button{ padding:0; display:flex; align-items: center; gap: 5px; background:none; border:none; color:#fff }
+.language-selector img{ width:27px}
+.lang-dropdown li a{ display:flex; gap: 4px; align-items: center; }

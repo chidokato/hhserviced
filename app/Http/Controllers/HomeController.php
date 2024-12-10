@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cache;
 
 use App\Models\Menu;
 use App\Models\Category;
@@ -26,18 +27,25 @@ use File;
 
 class HomeController extends Controller
 {
-    function __construct()
+    public function __construct()
     {
-        $setting = Setting::find('1');
-        $menu = Menu::orderBy('view', 'asc')->get();
-        view()->share( [
-            'setting'=>$setting,
-            'menu'=>$menu,
+        $this->setting = Cache::remember('setting', 60, function () {
+            return Setting::find('1');
+        });
+
+        $this->menu = Cache::remember('menu', 60, function () {
+            return Menu::orderBy('view', 'asc')->get();
+        });
+
+        view()->share([
+            'setting' => $this->setting,
+            'menu' => $this->menu,
         ]);
     }
 
     public function index()
     {
+        $locale = session()->get('locale', 'vi');
         $slider = Slider::orderBy('id', 'desc')->get();
         $product = Post::where('hot', 'true')->where('sort_by', 'Product')->orderBy('id', 'desc')->take(5)->get();
         $news = Post::where('sort_by', 'News')->orderBy('id', 'desc')->take(5)->get();

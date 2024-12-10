@@ -118,35 +118,31 @@ $('#diadiem').on('click', function(event) {
 // ngôn ngữ
 
 document.addEventListener("DOMContentLoaded", function () {
-    const langSelector = document.querySelector(".language-selector");
-    const langBtn = document.querySelector(".lang-btn");
+    const langButton = document.querySelector(".lang-btn");
     const langDropdown = document.querySelector(".lang-dropdown");
 
-    // Toggle dropdown
-    langBtn.addEventListener("click", function () {
-        langSelector.classList.toggle("active");
+    // Toggle dropdown visibility when clicking the button
+    langButton.addEventListener("click", function () {
+        langDropdown.classList.toggle("show");
     });
 
-    // Update button content when a language is selected
-    langDropdown.addEventListener("click", function (event) {
-        const target = event.target.closest("li");
-        if (target) {
-            const imgSrc = target.querySelector("img").src;
-            const langCode = target.querySelector("a").textContent.trim();
-
-            // Update button content
-            langBtn.innerHTML = `<img src="${imgSrc}" alt="${langCode} Flag"> ${langCode}`;
-            langSelector.classList.remove("active");
-
-            // Optional: Handle the selected language logic (e.g., reload page, call API)
-            console.log("Selected language:", target.dataset.lang);
-        }
+    // Change language when clicking an option
+    const langOptions = document.querySelectorAll(".lang-dropdown li a");
+    langOptions.forEach(option => {
+        option.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent default link behavior
+            const langUrl = this.getAttribute("href");
+            window.location.href = langUrl; // Redirect to the selected language URL
+        });
     });
 
-    // Close dropdown when clicking outside
+    // Close dropdown if clicking outside
     document.addEventListener("click", function (event) {
-        if (!langSelector.contains(event.target)) {
-            langSelector.classList.remove("active");
+        if (!langButton.contains(event.target) && !langDropdown.contains(event.target)) {
+            langDropdown.classList.remove("show");
         }
     });
 });
+
+
+

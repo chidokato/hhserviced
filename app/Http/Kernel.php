@@ -38,6 +38,8 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             \App\Http\Middleware\localzation::class,
+            \App\Http\Middleware\ShareGlobalData::class, // Thêm middleware này vào nhóm 'web'
+            \App\Http\Middleware\SetLanguage::class, // Thêm middleware này
         ],
 
         'api' => [
@@ -64,5 +66,6 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+        'setLanguage' => \App\Http\Middleware\SetLanguage::class, // Đặt tên tùy ý
     ];
 }

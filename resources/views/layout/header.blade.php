@@ -16,6 +16,9 @@
 
             <div class="navbar-collapse flex-grow-1" id="navbarsExample07XL">
                 <ul class="collapse navbar-nav mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{asset('')}}">{{__('lang.home')}}</a>
+                    </li>
                     @foreach($menu as $key => $val)
                         @if($val->parent == 0)
                             @if(count($menu->where('parent', $val->id)) == 0)
@@ -35,6 +38,7 @@
                                 </div>
                             </li>
                             @endif
+                            
                         @endif
                     @endforeach
                     <!-- <li class="nav-item dropdown">
@@ -53,11 +57,19 @@
             </div>
 
             <div class="language-selector">
-                <button class="lang-btn"><img src="assets/images/vn.jpg"> VIE</button>
+                <button class="lang-btn">
+                    @if($currentLocale == 'vi')
+                        <img src="assets/images/vn.jpg"> VIE
+                    @elseif($currentLocale == 'en')
+                        <img src="assets/images/en.jpg"> ENG
+                    @elseif($currentLocale == 'cn')
+                        <img src="assets/images/cn.jpg"> CHN
+                    @endif
+                </button>
                 <ul class="lang-dropdown">
-                    <li data-lang="en"><a href=""><img src="assets/images/en.jpg"> ENG</a></li>
-                    <li data-lang="vi"><a href=""><img src="assets/images/vn.jpg"> VIE</a></li>
-                    <li data-lang="cn"><a href=""><img src="assets/images/cn.jpg"> CHN</a></li>
+                    <li data-lang="en"><a href="lang/en"><img src="assets/images/en.jpg"> ENG</a></li>
+                    <li data-lang="vi"><a href="lang/vi"><img src="assets/images/vn.jpg"> VIE</a></li>
+                    <li data-lang="cn"><a href="lang/cn"><img src="assets/images/cn.jpg"> CHN</a></li>
                 </ul>
             </div>
 

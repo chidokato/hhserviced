@@ -34,6 +34,16 @@ Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']
      \UniSharp\LaravelFilemanager\Lfm::routes();
  });
 
+Route::get('lang/{locale}', function ($locale) {
+    // Kiểm tra nếu ngôn ngữ hợp lệ, ví dụ 'en', 'vi', 'cn'
+    if (in_array($locale, ['en', 'vi', 'cn'])) {
+        session(['locale' => $locale]);
+    }
+
+    return redirect()->back();  // Quay lại trang trước đó
+});
+
+
 Route::get('admin', [LoginController::class, 'index'])->name('login');
 Route::post('admin', [LoginController::class, 'store']);
 Route::get('logout', [LoginController::class, 'logout'])->name('logout');
@@ -111,41 +121,41 @@ Route::middleware(['auth'])->group(function () {
     });
 });
 
+
+
 // home view
-Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::get('/', [HomeController::class, 'index'])->name('home')->middleware('setLanguage');
 Route::get('sitemap.xml', [HomeController::class, 'sitemap'])->name('sitemap');
-// Route::get('search', [HomeController::class, 'search'])->name('search');
 
 // home system
-Route::get('sendmail', [HomeSystemController::class, 'sendmail'])->name('sendmail');
-Route::post('question', [HomeSystemController::class, 'question'])->name('question');
+// Route::get('sendmail', [HomeSystemController::class, 'sendmail'])->name('sendmail');
+// Route::post('question', [HomeSystemController::class, 'question'])->name('question');
 // Route::get('seach/filter/posts', [HomeSystemController::class, 'filterPosts'])->name('posts.filter');
 
 // add to cart
-Route::prefix('product')->group(function () {
-    Route::get('add-to-cart/{id}', [HomeController::class, 'addTocart'])->name('addTocart'); // thêm sản phẩm vào giỏ hàng
-    Route::get('addtocart_munti', [HomeController::class, 'addTocart_munti'])->name('addTocart_munti'); // thêm sản phẩm vào giỏ hàng
-    Route::get('showCart', [HomeController::class, 'showCart'])->name('showCart'); // show giỏ hàng
-    Route::POST('updateCart', [HomeController::class, 'updateCart'])->name('updateCart'); // update giỏ hàng
-    Route::get('delCart', [HomeController::class, 'delCart'])->name('delCart'); // delete sản phẩm trong giỏ hàng
-    Route::get('checkout', [HomeController::class, 'checkout'])->name('checkout'); // thanh toán
-    Route::get('get_checkout', [HomeController::class, 'checkout'])->name('get_checkout'); // thanh toán
-    Route::POST('order', [HomeController::class, 'order'])->name('order'); // thanh toán
-});
+// Route::prefix('product')->group(function () {
+//     Route::get('add-to-cart/{id}', [HomeController::class, 'addTocart'])->name('addTocart'); // thêm sản phẩm vào giỏ hàng
+//     Route::get('addtocart_munti', [HomeController::class, 'addTocart_munti'])->name('addTocart_munti'); // thêm sản phẩm vào giỏ hàng
+//     Route::get('showCart', [HomeController::class, 'showCart'])->name('showCart'); // show giỏ hàng
+//     Route::POST('updateCart', [HomeController::class, 'updateCart'])->name('updateCart'); // update giỏ hàng
+//     Route::get('delCart', [HomeController::class, 'delCart'])->name('delCart'); // delete sản phẩm trong giỏ hàng
+//     Route::get('checkout', [HomeController::class, 'checkout'])->name('checkout'); // thanh toán
+//     Route::get('get_checkout', [HomeController::class, 'checkout'])->name('get_checkout'); // thanh toán
+//     Route::POST('order', [HomeController::class, 'order'])->name('order'); // thanh toán
+// });
 
 // account
-Route::get('dangnhap', [HomeController::class, 'dangnhap'])->name('dangnhap');
-Route::get('dangky', [HomeController::class, 'dangky'])->name('dangky');
-Route::prefix('account')->group(function () {
-    Route::get('info', [HomeController::class, 'account'])->name('account');
-    Route::POST('update/{id}', [HomeController::class, 'update_account'])->name('update_account'); // cập nhật thông tin người dùng
-    Route::get('order', [HomeController::class, 'account_cart'])->name('account_cart');
-    Route::get('order/{id}', [HomeController::class, 'account_order_dital'])->name('account_order_dital');
-});
+// Route::get('dangnhap', [HomeController::class, 'dangnhap'])->name('dangnhap');
+// Route::get('dangky', [HomeController::class, 'dangky'])->name('dangky');
+// Route::prefix('account')->group(function () {
+//     Route::get('info', [HomeController::class, 'account'])->name('account');
+//     Route::POST('update/{id}', [HomeController::class, 'update_account'])->name('update_account'); // cập nhật thông tin người dùng
+//     Route::get('order', [HomeController::class, 'account_cart'])->name('account_cart');
+//     Route::get('order/{id}', [HomeController::class, 'account_order_dital'])->name('account_order_dital');
+// });
 
-
-
-Route::get('location/{slug}', [HomeController::class, 'province']);
+// Route::get('location/{slug}', [HomeController::class, 'province']);
 Route::get('{slug}', [HomeController::class, 'category']);
 Route::get('{catslug}/{slug}', [HomeController::class, 'post']);
 
