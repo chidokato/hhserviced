@@ -25,5 +25,10 @@
 		'hnh-12' => 'Theo dõi chúng tôi qua',
 		'hnh-13' => 'Văn phòng đại diện',
 		'hnh-14' => 'Số 21 Cầu Cốc, phường Tây Mỗ, quận Nam Từ Liêm, Hà Nội',
+
+		'menu_1' => 'Đặt Phòng',
+		'menu_2' => 'Về Chúng Tôi',
+		'menu_3' => 'Điểm Đến',
+		'menu_4' => 'Hội Viên Thân Thiết',
 	]
 ?>

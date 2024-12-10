@@ -26,6 +26,12 @@
 		'hnh-13' => 'Representative Office',
 		'hnh-14' => 'No. 21 Cau Coc, Tay Mo Ward, Nam Tu Liem District, Hanoi',
 
+		'menu_1' => 'Booking',
+		'menu_2' => 'About Us',
+		'menu_3' => 'Destinations',
+		'menu_4' => 'Loyalty Members',
+
+
 	]
 
 ?>

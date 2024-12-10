@@ -19,7 +19,19 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{asset('')}}">{{__('lang.home')}}</a>
                     </li>
-                    @foreach($menu as $key => $val)
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{asset('')}}">{{__('lang.menu_1')}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{asset('')}}">{{__('lang.menu_2')}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{asset('')}}">{{__('lang.menu_3')}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{asset('')}}">{{__('lang.menu_4')}}</a>
+                    </li>
+                    <!-- @foreach($menu as $key => $val)
                         @if($val->parent == 0)
                             @if(count($menu->where('parent', $val->id)) == 0)
                             <li class="nav-item">
@@ -38,8 +50,9 @@
                                 </div>
                             </li>
                             @endif
+                            
                         @endif
-                    @endforeach
+                    @endforeach -->
                     <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="news.htm" data-bs-toggle="dropdown" onclick="myFunctLink(this)">Tin tức</a>
                         <a class="expand dropdown-toggle d-lg-none" href="#" data-bs-toggle="dropdown"></a>
