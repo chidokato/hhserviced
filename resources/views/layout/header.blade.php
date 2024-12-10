@@ -52,6 +52,15 @@
                 </ul>
             </div>
 
+            <div class="language-selector">
+                <button class="lang-btn"><img src="assets/images/vn.jpg"> VIE</button>
+                <ul class="lang-dropdown">
+                    <li data-lang="en"><a href=""><img src="assets/images/en.jpg"> ENG</a></li>
+                    <li data-lang="vi"><a href=""><img src="assets/images/vn.jpg"> VIE</a></li>
+                    <li data-lang="cn"><a href=""><img src="assets/images/cn.jpg"> CHN</a></li>
+                </ul>
+            </div>
+
             <div class="toggle-menu" data-bs-toggle="button">
                 <button class="navbar-toggler ico-menu" id="navbarToggler">
                     <div>

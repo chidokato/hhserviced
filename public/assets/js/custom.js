@@ -115,3 +115,38 @@ $('#diadiem').on('click', function(event) {
 });
 
 
+// ngôn ngữ
+
+document.addEventListener("DOMContentLoaded", function () {
+    const langSelector = document.querySelector(".language-selector");
+    const langBtn = document.querySelector(".lang-btn");
+    const langDropdown = document.querySelector(".lang-dropdown");
+
+    // Toggle dropdown
+    langBtn.addEventListener("click", function () {
+        langSelector.classList.toggle("active");
+    });
+
+    // Update button content when a language is selected
+    langDropdown.addEventListener("click", function (event) {
+        const target = event.target.closest("li");
+        if (target) {
+            const imgSrc = target.querySelector("img").src;
+            const langCode = target.querySelector("a").textContent.trim();
+
+            // Update button content
+            langBtn.innerHTML = `<img src="${imgSrc}" alt="${langCode} Flag"> ${langCode}`;
+            langSelector.classList.remove("active");
+
+            // Optional: Handle the selected language logic (e.g., reload page, call API)
+            console.log("Selected language:", target.dataset.lang);
+        }
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", function (event) {
+        if (!langSelector.contains(event.target)) {
+            langSelector.classList.remove("active");
+        }
+    });
+});
