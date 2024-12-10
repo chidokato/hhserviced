@@ -49,7 +49,7 @@
                 <div class="col-lg-3">
                     <div class="card-overlay-flex">
                         @foreach($post->Images as $key => $val)
-                        @if($key < 3)
+                        @if($key < 2)
                         <a class="card-overlay card-overlay-sm outline-effect" title="2/10" href="data/images/{{$val->img}}">
                             <span class="card-overlay-img"><img src="assets/images/space-4.gif" alt="" class="w-100" style="background-image: url('data/images/{{$val->img}}');"></span>
                         </a>
@@ -60,7 +60,7 @@
                 <div class="col-lg-3">
                     <div class="card-overlay-flex">
                         @foreach($post->Images as $key => $val)
-                        @if($key < 5 && $key > 2)
+                        @if($key < 4 && $key > 1)
                         <a class="card-overlay card-overlay-sm outline-effect" title="2/10" href="data/images/{{$val->img}}">
                             <span class="card-overlay-img"><img src="assets/images/space-4.gif" alt="" class="w-100" style="background-image: url('data/images/{{$val->img}}');"></span>
                         </a>
@@ -70,7 +70,7 @@
                 </div>
                 <div class="more-item">
                     @foreach($post->Images as $val)
-                    @if($key > 4)
+                    @if($key > 3)
                     <a class="card-overlay" title="6/10" href="https://top10tphcm.com/wp-content/uploads/2018/06/New-city-min.jpg"></a>
                     @endif
                     @endforeach
