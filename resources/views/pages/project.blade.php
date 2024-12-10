@@ -21,9 +21,11 @@
         <div class="col-md-12">
             <nav aria-label="breadcrumb" class="main-breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{asset('')}}">H&H Serviced Apartments</a></li>
-                    <li class="breadcrumb-item"><a href="{{$post->category->slug}}">{{$post->category->name}}</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">{{$post->name}}</li>
+                    <li class="breadcrumb-item"><a href="{{asset('')}}">{{__('lang.hnh-1')}}</a></li>
+                    <!-- <li class="breadcrumb-item"><a href="{{$post->category->slug}}">{{$post->category->name}}</a></li> -->
+                    <li class="breadcrumb-item"><a href="{{$post->category->slug}}">{{__('lang.hnh-2')}}</a></li>
+                    <!-- <li class="breadcrumb-item active" aria-current="page">{{$post->name}}</li> -->
+                    <li class="breadcrumb-item active" aria-current="page">{{__('lang.hnh-3')}}</li>
                 </ol>
             </nav>
         </div>
@@ -85,7 +87,7 @@
         <div class="col-lg-8">
             <div class="heading">
                 <div class="left">
-                    <h1 class="text-uppercase title-cat">{{$post->name}}</h1>
+                    <h1 class="text-uppercase title-cat">{{__('lang.hnh-3')}}</h1>
                 </div>
             </div>
             <!-- <div class="status">
@@ -95,7 +97,7 @@
             </div> -->
         
             <div class="content">
-                {!! $post->content !!}
+                {{__('lang.hnh-4')}}
             </div>
         </div>
         <div class="col-md-4">
@@ -112,7 +114,7 @@
 <div class="container">
     <div class="heading">
         <div class="left">
-            <h2 class="text-uppercase title-cat">Lựa chọn phòng dành cho bạn</h2>
+            <h2 class="text-uppercase title-cat">{{__('lang.hnh-5')}}</h2>
         </div>
     </div>
     <div class="row row-cols-2 row-cols-md-3 row-cols-lg-3 g-3 g-lg-3 grid-view mb-5">
@@ -140,11 +142,11 @@
                     </div>
                     <div class="card-footer">
                         <div class="card-price">
-                            <div>Chỉ từ</div>
+                            <div>{{__('lang.hnh-7')}}</div>
                             <div class="price"><span>1.600.000</span> Đồng/Đêm</div>
-                            <span>Đã bao gồm thuế và phí</span>
+                            <span>{{__('lang.hnh-2')}}</span>
                         </div>
-                        <button>Đăt phòng</button>
+                        <button>{{__('lang.hnh-8')}}</button>
                     </div>
                 </div>
             </div>
