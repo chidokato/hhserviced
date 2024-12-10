@@ -71,7 +71,7 @@
                 <div class="more-item">
                     @foreach($post->Images as $val)
                     @if($key > 3)
-                    <a class="card-overlay" title="6/10" href="https://top10tphcm.com/wp-content/uploads/2018/06/New-city-min.jpg"></a>
+                    <a class="card-overlay" title="{{$key+1}}/{{count($post->Images)}}" href="data/images/{{$val->img}}"></a>
                     @endif
                     @endforeach
                 </div>
