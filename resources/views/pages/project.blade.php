@@ -42,7 +42,7 @@
                             <div>Căn hộ Roman Plaza</div>
                         </div>
                     </a> -->
-                    <a class="card-overlay card-overlay-sm outline-effect" title="2/10" href="data/images/{{$post->img}}">
+                    <a class="card-overlay card-overlay-sm outline-effect" title="1/{{count($post->Images)+1}}" href="data/images/{{$post->img}}">
                         <span class="card-overlay-img"><img src="assets/images/space-4.gif" alt="" class="w-100" style="background-image: url('data/images/{{$post->img}}');"></span>
                     </a>
                 </div>
@@ -50,7 +50,7 @@
                     <div class="card-overlay-flex">
                         @foreach($post->Images as $key => $val)
                         @if($key < 2)
-                        <a class="card-overlay card-overlay-sm outline-effect" title="2/10" href="data/images/{{$val->img}}">
+                        <a class="card-overlay card-overlay-sm outline-effect" title="{{$key+2}}/{{count($post->Images)+1}}" href="data/images/{{$val->img}}">
                             <span class="card-overlay-img"><img src="assets/images/space-4.gif" alt="" class="w-100" style="background-image: url('data/images/{{$val->img}}');"></span>
                         </a>
                         @endif
@@ -61,7 +61,7 @@
                     <div class="card-overlay-flex">
                         @foreach($post->Images as $key => $val)
                         @if($key < 4 && $key > 1)
-                        <a class="card-overlay card-overlay-sm outline-effect" title="2/10" href="data/images/{{$val->img}}">
+                        <a class="card-overlay card-overlay-sm outline-effect" title="{{$key+2}}/{{count($post->Images)+1}}" href="data/images/{{$val->img}}">
                             <span class="card-overlay-img"><img src="assets/images/space-4.gif" alt="" class="w-100" style="background-image: url('data/images/{{$val->img}}');"></span>
                         </a>
                         @endif
@@ -71,7 +71,7 @@
                 <div class="more-item">
                     @foreach($post->Images as $val)
                     @if($key > 3)
-                    <a class="card-overlay" title="{{$key+1}}/{{count($post->Images)}}" href="data/images/{{$val->img}}"></a>
+                    <a class="card-overlay" title="{{$key+2}}/{{count($post->Images)+1}}" href="data/images/{{$val->img}}"></a>
                     @endif
                     @endforeach
                 </div>
