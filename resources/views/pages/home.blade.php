@@ -96,7 +96,7 @@
                                         <div class="card-body-wrap">
                                             <h5 class="card-title"><a href="{{$val->category->slug}}/{{$val->slug}}" class="text-truncate">{{$val->name}}</a></h5>
                                             <div class="card-info" title="">
-                                                <span class="">
+                                                <span style="height: 139px; overflow: hidden;">
                                                     {!! $val->content !!}
                                                 </span>
                                             </div>
