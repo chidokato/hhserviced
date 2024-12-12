@@ -53,7 +53,7 @@
                         @include('layout.search')
                         <br>
                         <br>
-                        <button class="btn-button">Khám phá</button>
+                        <button class="btn-button">{{__('lang.home_7')}}</button>
                     </div>
                 </div>
             </div>
@@ -68,15 +68,15 @@
         <div class="cover-title-home">
             <div class="text-center">
                 <div class="cover-title">
-                    <h2><span class="cover-title-filled text-main">Chốn dừng chân an yên <br> giữa nhịp sống sôi động</span></h2>
+                    <h2><span class="cover-title-filled text-main">{{__('lang.home_8')}} <br> {{__('lang.home_9')}}</span></h2>
                 </div>
                 <div class="cover-descip">
-                    <p> Vừa cung cấp đầy đủ các tiện nghi giống như một khách sạn truyền thống, nhưng lại có thêm không gian, tiện lợi và tiện nghi để bạn cảm thấy như đang ở trong chính ngôi nhà của mình, H&H Serviced Apartments hứa hẹn sẽ mang đến trải nghiệm lưu trú hoàn hảo cho những chuyến "dịch chuyển" của quý khách.</p>
+                    <p> {{__('lang.home_10')}}</p>
                 </div>
-                <button class="btn-button">Khám phá thêm</button>
+                <button class="btn-button">{{__('lang.home_11')}}</button>
                 <div class="line"></div>
                 <div class="cover-title">
-                    <h2><span class="cover-title-filled text-main">Khám phá chuỗi căn hộ <br> dịch vụ của H&H</span></h2>
+                    <h2><span class="cover-title-filled text-main">{{__('lang.home_12')}} <br> {{__('lang.home_13')}}</span></h2>
                 </div>
             </div>
         </div>
@@ -101,7 +101,7 @@
                                                 </span>
                                             </div>
                                         </div>
-                                        <button class="btn-button">Đặt ngay</button>
+                                        <button class="btn-button">{{__('lang.home_16')}}</button>
                                     </div>
                                 </div>
                             </div>
@@ -122,12 +122,12 @@
     <div class="container position-relative">
         <div class="cover-title-home">
             <div class="cover-title">
-                <h2><span class="cover-title-filled">Đăng kí thành viên Hi-Club</span></h2>
-                <h3>Mở khoá đặc quyền, nâng tầm trải nghiệm</h3>
-                <p>Gia nhập Hi-Club và tích luỹ số đêm trải nghiệm tại H&H để tận hưởng hàng loạt các quyền lợi và ưu đãi độc quyền</p>
+                <h2><span class="cover-title-filled">{{__('lang.home_22')}}</span></h2>
+                <h3>{{__('lang.home_23')}}</h3>
+                <p>{{__('lang.home_24')}}</p>
             </div>
             <div>
-                <button class="btn-button"> Tham gia ngay </button>
+                <button class="btn-button"> {{__('lang.home_25')}} </button>
             </div>
         </div>
     </div>
@@ -141,12 +141,12 @@
                 <div class="cover-title-home">
                     <div class="text-start">
                         <div class="cover-title">
-                            <h2><span class="cover-title-filled">Về chúng tôi</span></h2>
+                            <h2><span class="cover-title-filled">{{__('lang.home_26')}}</span></h2>
                         </div>
                         <div class="cover-descip">
-                            <h3>Tiên phong chuỗi căn hộ dịch vụ thế hệ mới</h3>
-                            <p>H&H Serviced Apartments, vận hành bởi Vietnam Homes Group, tự hào mang đến chuỗi căn hộ dịch vụ thế hệ mới, mở ra một trải nghiệm sống hoàn hảo, nơi bạn tận hưởng trọn vẹn sự tiện nghi mà vẫn giữ được nét riêng tư cho riêng mình.</p>
-                            <p>Tại H&H Serviced Apartments, mỗi chuyến đi đều là một câu chuyện riêng, được viết nên bởi chính bạn. Với mô hình căn hộ khách sạn thế hệ mới, H&H mong muốn "tái định nghĩa" những chuyến đi, kiến tạo nên những trải nghiệm đong đầy cảm xúc, nơi sự thoải mái tuyệt đối hòa quyện cùng nét đẹp văn hóa bản địa. Mỗi chuyến đi cùng H&H sẽ là một hành trình khám phá, một câu chuyện kể đầy thi vị về những miền đất mới.</p>
+                            <h3>{{__('lang.home_27')}}</h3>
+                            <p>{{__('lang.home_28')}}</p>
+                            <p>{{__('lang.home_29')}}</p>
                         </div>
                     </div>
                 </div>
