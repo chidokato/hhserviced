@@ -4,6 +4,7 @@
 @section('description') {{$setting->description}} @endsection
 @section('robots') index, follow @endsection
 @section('url'){{asset('')}}@endsection
+@section('img'){{asset('')}}data/images/z6111931192228-68adeb5ed9b7d918f28bc256b902e2cb_34.jpg@endsection
 
 @section('css')
 <link href="assets/css/home.css" rel="stylesheet">
