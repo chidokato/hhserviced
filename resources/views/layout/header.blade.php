@@ -23,7 +23,7 @@
                         <a class="nav-link" href="dat-phong">{{__('lang.menu_1')}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="ve-chung-thoi">{{__('lang.menu_2')}}</a>
+                        <a class="nav-link" href="{{asset('')}}">{{__('lang.menu_2')}}</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{asset('')}}">{{__('lang.menu_3')}}</a>
