@@ -20,6 +20,9 @@
                         <a class="nav-link" href="{{asset('')}}">{{__('lang.home')}}</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="trai-nghiem">Trải nghiệm</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="dat-phong">{{__('lang.menu_1')}}</a>
                     </li>
                     <li class="nav-item">

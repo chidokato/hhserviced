@@ -1,0 +1,48 @@
+.bannertop{}
+.bannertop .container{ max-width:85% }
+.bannertop .img{ padding-top:4rem; text-align:center; position:relative; }
+.bannertop .img .balloon{ position:absolute; bottom:20px; left:60px }
+.bannertop .img .balloon img{ width:450px;}
+.bannertop .img img{ width:330px; z-index:5; position:relative; }
+.bannertop .col-md-8{ display:flex; align-items: center; }
+.bannertop .content{ font-size:1.7rem; line-height:2.2rem }
+.bannertop .content img{ margin-left:-70px; margin-bottom:20px }
+.bannertop{}
+.bannertop{}
+
+
+@keyframes float {
+    0% {
+        transform: translateY(0); /* Vị trí ban đầu */
+    }
+    50% {
+        transform: translateY(-50px); /* Lên cao */
+    }
+    100% {
+        transform: translateY(0); /* Quay lại vị trí ban đầu */
+    }
+}
+
+.bannertop .img .balloon img {
+    width: 450px;
+    animation: float 3s ease-in-out infinite; /* Thời gian 3s, hiệu ứng lặp vô hạn */
+    transition: transform 0.3s; /* Mượt khi hover */
+}
+
+.bannertop .img .balloon img:hover {
+    transform: scale(1.1); /* Tăng kích thước nhẹ khi hover */
+}
+
+
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(10px, -50px); /* Bay lên và qua phải */
+    }
+    100% {
+        transform: translate(0, 0); /* Quay về vị trí ban đầu */
+    }
+}

@@ -80,6 +80,10 @@ class HomeController extends Controller
             return view('pages.contact', compact(
                 'data',
             ));
+        }elseif($slug == 'trai-nghiem'){
+            return view('pages.experiences', compact(
+                'data',
+            ));
         }else{
             if ($data->sort_by == 'Product') {
                 $cats = Category::where('sort_by','Product')->where('parent','>',0)->get();
