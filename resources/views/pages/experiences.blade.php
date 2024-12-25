@@ -79,6 +79,7 @@
 </section>
 
 <section class="section2">
+	<div class="spotlight1"></div>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
@@ -100,6 +101,7 @@
 </section>
 
 <section class="section2">
+	<div class="spotlight2"></div>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
@@ -117,6 +119,26 @@
 				</div>
 			</div>
 		</div>
+	</div>
+</section>
+
+<section class="section3">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<h3>Dịch vụ quản gia & lễ tân 24/7</h3>
+				<p>Tận hưởng trọn vẹn cảm giác "như ở nhà" với không gian riêng tư, thoải mái, mà vẫn đầy đủ tiện nghi chuẩn khách sạn cao cấp tại H&H với chuỗi dịch vụ quản gia & lễ tân 24/7 vận hành bởi đơn vị Vietnam Homes Group.</p>
+				<ul>
+					<li>Dịch vụ lễ tân 24/7</li>
+					<li>Dịch vụ buồng phòng</li>
+					<li>Dịch vụ hỗ trợ</li>
+					<li>Dịch vụ giặt là</li>
+					<li>Dịch vụ đặt xe, đưa đón</li>
+					<li>Dịch vụ ăn uống, đặt tiệc tại chỗ</li>
+				</ul>
+			</div>
+		</div>
+		
 	</div>
 </section>
 

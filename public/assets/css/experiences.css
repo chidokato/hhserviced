@@ -97,7 +97,7 @@
 .section1 h2{ text-align:center; font-size:6rem; color:#f0c964 }
 .section1 p{ text-align:center; font-size:1.5rem; color:#fff; margin:0 auto; line-height:1.7rem }
 
-.section2{ padding:4rem 0; }
+.section2{ padding:4rem 0; position:relative; }
 .section2{ background:var(--main-color); }
 .section1 .container, .section2 .container{ max-width:60% }
 .section2 h3{ font-size:5rem; color:#f0c964 }
@@ -119,4 +119,48 @@
     bottom: -300px;
     right: 0px;
     z-index: 1;
+}
+.section2>.spotlight1 {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, #276867, #ffffff00);
+    border-radius: 50%;
+    filter: blur(50px);
+    top: 0px;
+    left: -250px;
+    z-index: 1;
+} 
+.section2>.spotlight2 {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, #276867, #ffffff00);
+    border-radius: 50%;
+    filter: blur(50px);
+    bottom: -150px;
+    right: -200px;
+    z-index: 1;
+} 
+
+
+.section3{ position:relative; z-index:5;
+    background:url(../img/experiences/pic-foot.png) no-repeat center center; /* Ảnh nền gốc */
+    background-size: cover;
+    position: relative;
+}
+.section3{ color:#fff; padding:4rem 0 }
+.section3 h3{ color:#f0c964; font-size:3rem }
+.section3 p{ font-size:1.4rem; line-height:2rem }
+.section3 ul{ display:flex; flex-direction: column; }
+.section3 ul li{ font-size:1.4rem; line-height:2rem; position:relative; padding-left:18px  }
+.section3 ul li:after {
+    position: absolute;
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background: #fff;
+    left: 0;
+    top: 12px;
 }
