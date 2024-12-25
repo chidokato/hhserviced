@@ -66,7 +66,7 @@
     background-size: contain; /* Đảm bảo ảnh vừa khung */
     background-repeat: no-repeat;
     background-position: center;
-    animation: float 1s ease-in-out infinite; /* Thời gian 3s, hiệu ứng lặp vô hạn */
+    animation: float 2s ease-in-out infinite; /* Thời gian 3s, hiệu ứng lặp vô hạn */
     transition: transform 0.6s; /* Mượt khi hover */
 }
 .bannertop>.balloon:before{
@@ -80,7 +80,7 @@
     background-size: contain; /* Đảm bảo ảnh vừa khung */
     background-repeat: no-repeat;
     background-position: center;
-    animation: float 2s ease-in-out infinite; /* Thời gian 3s, hiệu ứng lặp vô hạn */
+    animation: float 3s ease-in-out infinite; /* Thời gian 3s, hiệu ứng lặp vô hạn */
     transition: transform 0.9s; /* Mượt khi hover */
 }
 
