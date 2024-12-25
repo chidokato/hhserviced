@@ -70,7 +70,8 @@
 			</div>
 			<div class="col-md-6">
 				<div class="img">
-					<img src="assets/img/experiences/lounge.png">					
+					<img src="assets/img/experiences/lounge.png">
+					<div class="spotlight"></div>
 				</div>
 			</div>
 		</div>
