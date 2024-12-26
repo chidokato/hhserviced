@@ -26,14 +26,27 @@ footer .ft-info{ display:flex; align-items: center; justify-content: center; }
 .ft-contact h6:after, .cover-ct-item-text h6:after {content:'';right: -20px;bottom:4px;height: .5px;background-color: #fff;display: block;position:absolute;left: 0;}
 .ft-contact-item-ico, .cover-ct-item-img {display:flex;align-items:center;justify-content:center;background-color:var(--main-color);height: 68px;flex: 0 0 auto;width:68px;border-radius:50%;margin-left: 20px;/* border: 3px solid #15213b; */margin-right: -47px;position: relative;font-size: 40px;color: #fff;}
 .ft-contact-wrap {color: rgb(255 255 255 / 75%);position: relative;z-index: 2;}
-.ft-social {text-align:right;padding-right: 36px;margin-top:32px;}
-.ft-social a {font-size: 48px;color:var(--sub-color);background-color:#fff;padding:0;width: 56px;height: 56px;border-radius:50%;display:flex;justify-content:center;align-items:center;margin: 0 4px;}
+.ft-social {}
+.ft-social a {font-size: 38px;color:#fff;padding:0;width: 50px;height: 50px;border-radius:50%;display:flex;justify-content:center;align-items:center;margin: 0 4px; border: 2px solid;}
 .ft-social a:hover {color:var(--sub-color)}
 
 footer .ft-main, footer .ft-contact-wrap {width: 100%;}
 
 footer h2{ color:var(--sub-color); line-height:2rem; margin-bottom:2rem }
 footer p{ margin-bottom:0px; font-size:1rem }
+
+footer hr {
+    font-size: 1rem;
+    color: #fff;
+    height: 2px !important;
+    background: #fff !important;
+    opacity: 1;
+}
+
+.bottom{
+    text-align: center;
+}
+.bottom h3{ font-size:2rem }
 
 @media (min-width: 769px) {
 }
