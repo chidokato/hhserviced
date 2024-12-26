@@ -13,8 +13,10 @@
             </div>
             <div class="col-md-5">
                 <h2>{{__('lang.hnh-13')}}</h2>
-                <p>{{__('lang.hnh-14')}}</p>
-                <p>+(84) 916 442 096</p>
+                <ul class="address">
+                    <li><i class="icon-location"></i> {{__('lang.hnh-14')}}</li>
+                    <li><i class="icon-phone-filled"></i> +(84) 916 442 096</li>
+                </ul>
             </div>
         </div>
         <hr>

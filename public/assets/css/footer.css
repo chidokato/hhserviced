@@ -48,6 +48,9 @@ footer hr {
 }
 .bottom h3{ font-size:2rem }
 
+footer .address{ display:flex; flex-direction: column; }
+footer .address li{ font-size:1rem; margin-bottom:1rem }
+footer p{ font-size:1rem; margin-bottom:1rem }
 @media (min-width: 769px) {
 }
 
